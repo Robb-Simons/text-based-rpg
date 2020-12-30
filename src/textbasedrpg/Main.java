@@ -12,11 +12,18 @@ import java.util.Scanner;
 public class Main {
 	
 	public static void main(String[] args) {
-		//TODO: Start-game Code goes here.
 		boolean running = true;
+		Player myPlayer = new Player();
+		Monster myMonsters = new Monster();
 		
 		//Start game sequence. 
 		System.out.println("\t # Welcome to the Dungeon of Holt, Traveler. # \n---------------------------------------------------------------------");
-		System.out.println("It seems you've lost your way...\nYou must fight your way out of here...\nif you are going to make it out alive..\nGood luck.\n---------------------------------------------------------------------");
+		System.out.println("It seems you've lost your way...\nYou must fight your way out of here...\nIf you are going to make it out alive..\nGood luck."
+							+ "\n---------------------------------------------------------------------");
+		
+		GAME: // label needed for later to return to the beginning of the game (death, or restart). Make other labels within the While loop to call to certain events. 
+		while (running) {
+			//Game Start.
+		}
 	}
 }
