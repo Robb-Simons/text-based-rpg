@@ -12,7 +12,11 @@ import java.util.Scanner;
 public class Main {
 	
 	public static void main(String[] args) {
-		//TODO: Code goes here.
+		//TODO: Start-game Code goes here.
+		boolean running = true;
 		
+		//Start game sequence. 
+		System.out.println("\t # Welcome to the Dungeon of Holt, Traveler. # \n---------------------------------------------------------------------");
+		System.out.println("It seems you've lost your way...\nYou must fight your way out of here...\nif you are going to make it out alive..\nGood luck.\n---------------------------------------------------------------------");
 	}
 }
