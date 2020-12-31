@@ -10,7 +10,7 @@ package textbasedrpg;
 public class Monster {
 	private int maxEnemyHealth = 75;
 	private int EnemyAttack = 25;
-	String[] Enames = {"Orc",//0
+	private String[] Enames = {"Orc",//0
 					   "Skeleton",//1
 					   "Torturer",//2
 					   "Ghoul",//3
