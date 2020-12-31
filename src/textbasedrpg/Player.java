@@ -9,6 +9,7 @@ package textbasedrpg;
  *************************************************************************************************/
 public class Player {
 	private String playerName = "Traveler";
+	private int gold = 0;
 	private int playerHealth = 100;
 	private int playerMaxHealth = 175;
 	private int playerStamina = 100;
@@ -21,15 +22,24 @@ public class Player {
 	private String[] classNames = {"Warrior", "Rogue", "Alchemist"};
 	private String finalClassName = "test";
 	
+	public int getGold() {
+		return gold;
+	}
+	
+	public void setGold(int newGold) {
+		this.gold = newGold;
+	}
+	
 	public String getClassName() {
 		return finalClassName;
 	}
-	
 	
 	public void setClassName(int classNameMod) {
 		int newClass = classNameMod - 1;
 		finalClassName = classNames[newClass];
 	}
+	
+	//TODO: Add stat bonuses/decreases for each Class. 
 	
 	public String getPlayerName() {
 		return playerName;

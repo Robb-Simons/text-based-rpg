@@ -26,5 +26,7 @@ public class Environment {
 			"Great Hall",//8
 			"Undercroft",//9
 			"Cellars",//10
+			"Mage's Chamber",//11
+			"Portal Room",//12
 			};
 }
