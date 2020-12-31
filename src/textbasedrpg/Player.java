@@ -17,6 +17,7 @@ public class Player {
 	private int playerPotions = 2;
 	private int healthPotionHeal = 25;
 	private int healthPotionDropChance = 50;
+	private String[] classNames = {"Warrior","Rogue","Alchemist"};
 	
 	public int getPlayerHealth() {
 		return playerHealth;

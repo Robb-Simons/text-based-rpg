@@ -34,6 +34,7 @@ public class Main {
 		GAME: // label needed for later to return to the beginning of the game (death, or restart). Make other labels within the While loop to call to certain events. 
 		while (running) {
 			//Game Start.
+			running = false;//Test to break the while loop, saving memory while testing ofc.
 		}
 	}
 }
