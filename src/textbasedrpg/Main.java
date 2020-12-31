@@ -20,14 +20,15 @@ public class Main {
 		Random rand = new Random();
 		
 		//Start game sequence. 
-		System.out.println("\t # Welcome to the Dungeon of Holt, Traveler. # \n---------------------------------------------------------------------");
+		System.out.println("\t # Welcome to the Dungeon of Holt, Traveler. # \n--------------------------------------------------------------------------");
 		System.out.println("It seems you've lost your way...\nYou must fight your way out of here...\nIf you are going to make it out alive..\nGood luck."
-							+ "\n---------------------------------------------------------------------");
+							+ "\n--------------------------------------------------------------------------");
 		//Instructions
 		System.out.println("\t ################## HOW TO PLAY ##################\n");
 		System.out.println("\t WHEN OUT OF COMBAT:\nPRESS 1 to move forward.\nPRESS 2 to scan the area.\nPRESS 3 to drink a potion.\nPRESS 4 to rest.\nPRESS 'x' to quit the game.");
 		System.out.println("\t WHEN IN COMBAT: \nPRESS 1 to ATTACK\nPRESS 2 to BLOCK\nPRESS 3 To RUN");
-		System.out.println("---------------------------------------------------------------------");
+		System.out.println("--------------------------------------------------------------------------");
+		System.out.println("Starting Values: ");
 		System.out.println("\tPlayer Health: " + Player.getPlayerHealth() + "\tPlayer Stamina: " + Player.getPlayerStamina() + "\tHealth Potions: " + Player.getPlayerPotions());
 		
 		GAME: // label needed for later to return to the beginning of the game (death, or restart). Make other labels within the While loop to call to certain events. 
