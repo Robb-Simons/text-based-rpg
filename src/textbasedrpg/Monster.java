@@ -6,10 +6,8 @@ package textbasedrpg;
  * Program Desc: 
  * TODO:make getters and setters for all variables here to be executed in Main.java                                        
  *************************************************************************************************/
-import java.util.Random;
 
 public class Monster {
-	private Random rand = new Random();
 	private int maxEnemyHealth = 75;
 	private int EnemyAttack = 25;
 	String[] Enames = {"Orc",//0

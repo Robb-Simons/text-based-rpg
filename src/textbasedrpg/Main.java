@@ -15,6 +15,9 @@ public class Main {
 		boolean running = true;
 		Player myPlayer = new Player();
 		Monster myMonsters = new Monster();
+		Environment myEnvionment = new Environment();
+		Combat myCombat = new Combat();
+		Random rand = new Random();
 		
 		//Start game sequence. 
 		System.out.println("\t # Welcome to the Dungeon of Holt, Traveler. # \n---------------------------------------------------------------------");
