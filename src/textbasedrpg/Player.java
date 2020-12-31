@@ -8,6 +8,7 @@ package textbasedrpg;
  *TODO: Create moveForward(), Attack(), Block(), drinkPotion();                                       
  *************************************************************************************************/
 public class Player {
+	private String playerName = "Traveler";
 	private int playerHealth = 100;
 	private int playerMaxHealth = 175;
 	private int playerStamina = 100;
@@ -17,7 +18,26 @@ public class Player {
 	private int playerPotions = 2;
 	private int healthPotionHeal = 25;
 	private int healthPotionDropChance = 50;
-	private String[] classNames = {"Warrior","Rogue","Alchemist"};
+	private String[] classNames = {"Warrior", "Rogue", "Alchemist"};
+	private String finalClassName = "test";
+	
+	public String getClassName() {
+		return finalClassName;
+	}
+	
+	
+	public void setClassName(int classNameMod) {
+		int newClass = classNameMod - 1;
+		finalClassName = classNames[newClass];
+	}
+	
+	public String getPlayerName() {
+		return playerName;
+	}
+	
+	public void setPlayerName(String newName) {
+		this.playerName = newName;
+	}
 	
 	public int getPlayerHealth() {
 		return playerHealth;
