@@ -8,6 +8,13 @@ package textbasedrpg;
  * TODO:add things like room names, and loot to go inside dungeons.                                   
  *************************************************************************************************/
 public class Environment {
+	private String[] roomNameAdj = {"Dank",//0
+									"Damp",//1
+									"Dark",//2
+									"Cold",//3
+									"Haunted",//4
+									"Desolated"//5
+									};
 	private String[] roomNames = {"Cell Block", //0
 			"Torture Chamber",//1
 			"Hallway",//2
