@@ -10,4 +10,10 @@ import java.util.Random;
 
 public class Combat {
 	private Random rand = new Random();
+	Monster Monster = new Monster();
+	Player Player = new Player();
+	
+	public void startCombat() {
+		//this method should start the combat block, while in this 
+	}
 }

@@ -13,10 +13,10 @@ public class Main {
 	
 	public static void main(String[] args) {
 		boolean running = true;
-		Player myPlayer = new Player();
-		Monster myMonsters = new Monster();
-		Environment myEnvionment = new Environment();
-		Combat myCombat = new Combat();
+		Player Player = new Player();
+		Monster Monster = new Monster();
+		Environment Envionment = new Environment();
+		Combat Combat = new Combat();
 		Random rand = new Random();
 		
 		//Start game sequence. 
