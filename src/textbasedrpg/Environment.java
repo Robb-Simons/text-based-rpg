@@ -19,5 +19,12 @@ public class Environment {
 			"Torture Chamber",//1
 			"Hallway",//2
 			"Guard's Quarters",//3
+			"Labratory",//4
+			"Bed Chambers",//5
+			"Kitchen",//6
+			"Chapel",//7
+			"Great Hall",//8
+			"Undercroft",//9
+			"Cellars",//10
 			};
 }
