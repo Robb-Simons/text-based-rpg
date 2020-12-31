@@ -41,6 +41,7 @@ public class Main {
 		System.out.println("Enter 2 for Rogue (-25 HP) (+20 Attack) (+10 Stamina) (Default Max Potions)\n");
 		System.out.println("Enter 3 for Alchemist (-50 HP) (-10 Attack) (-30 Stamina) (+4 Max Potions)\n");
 		int inputI = in.nextInt();
+		//TODO: make this a switch statement.. I dont think it needs to be IF conditionals. Someone if you are reading this help. Im not sure. 
 			if (inputI == 1) {
 				//Warrior
 				Player.setClassName(1);
@@ -56,6 +57,11 @@ public class Main {
 			if (inputI == 3) {
 				//Alchemist
 				Player.setClassName(3);
+				System.out.println("You have Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
+			}
+			
+			if (inputI == 4) {
+				//Traveler
 				System.out.println("You have Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
 			}
 		GAME_START: // label needed for later to return to the beginning of the game (death, or restart). Make other labels within the While loop to call to certain events. 

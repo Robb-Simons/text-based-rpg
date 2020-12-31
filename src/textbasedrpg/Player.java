@@ -20,7 +20,7 @@ public class Player {
 	private int healthPotionHeal = 25;
 	private int healthPotionDropChance = 50;
 	private String[] classNames = {"Warrior", "Rogue", "Alchemist"};
-	private String finalClassName = "test";
+	private String finalClassName = "Traveler";
 	
 	public int getGold() {
 		return gold;
