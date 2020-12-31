@@ -32,8 +32,9 @@ public class Main {
 		System.out.println("\tPlayer Health: " + Player.getPlayerHealth() + "\tPlayer Stamina: " + Player.getPlayerStamina() + "\tHealth Potions: " + Player.getPlayerPotions());
 		System.out.println("--------------------------------------------------------------------------");
 		System.out.println("\t # What Class would you like to be? # ");
-		System.out.println("1 for Warrior (+75 HP) (-20 Stamina) (-2 Max Potions)");
-		
+		System.out.println("1 for Warrior (+75 HP) (+10 Attack) (-20 Stamina) (-2 Max Potions)\n");
+		System.out.println("2 for Rogue (-25 HP) (+20 Attack) (+10 Stamina) (Default Max Potions)\n");
+		System.out.println("3 for Alchemist (-50 HP) (-10 Attack) (-30 Stamina) (+4 Max Potions)\n");
 		
 		GAME: // label needed for later to return to the beginning of the game (death, or restart). Make other labels within the While loop to call to certain events. 
 		while (running) {
