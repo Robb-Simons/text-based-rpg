@@ -4,7 +4,8 @@ package textbasedrpg;
  * Composition date: 12-29-2020
  * Program name: Text-based RPG project
  * Program Desc:  
- *TODO: make getters and setters for all variables here to be executed in Main.java                                       
+ *TODO: make getters and setters for all variables here to be executed in Main.java
+ *TODO: Create moveForward(), Attack(), Block(), drinkPotion();                                       
  *************************************************************************************************/
 public class Player {
 	private int playerHealth = 100;
