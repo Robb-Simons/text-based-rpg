@@ -14,6 +14,7 @@ public class Player {
 	private int playerMaxPotions = 5;
 	private int playerAttack = 35;
 	private int playerMaxBlock = -10;
+	private int playerPotions = 2;
 	private int healthPotionHeal = 25;
 	private int healthPotionDropChance = 50;
 	
@@ -41,6 +42,14 @@ public class Player {
 		this.playerStamina = newStam;
 	}
 	
+	public int getPlayerPotions() {
+		return playerPotions;
+	}
+	
+	public void setPlayerPotions(int newPots) {
+		this.playerPotions = newPots;
+	}
+	
 	public int getPlayerMaxBlock() {
 		return playerMaxBlock;
 	}
@@ -48,7 +57,6 @@ public class Player {
 	public void setPlayerMaxBlock(int newBlock) {
 		this.playerMaxBlock = newBlock;
 	}
-	
 	
 	public int getPlayerAttack() {
 		return playerAttack;

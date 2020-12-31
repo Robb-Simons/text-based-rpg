@@ -25,8 +25,10 @@ public class Main {
 							+ "\n---------------------------------------------------------------------");
 		//Instructions
 		System.out.println("\t ################## HOW TO PLAY ##################\n");
-		System.out.println("\t WHEN OUT OF COMBAT:\nPRESS 1 to move forward.\nPRESS 2 to scan the area.\nPRESS 3 to drink a potion.\nPRESS 'x' to quit the game.");
-		System.out.println("\t WHEN IN COMBAT: \nPRESS 1 to ATTACK.\nPRESS 2 to BLOCK\nPRESS 3 To RUN");
+		System.out.println("\t WHEN OUT OF COMBAT:\nPRESS 1 to move forward.\nPRESS 2 to scan the area.\nPRESS 3 to drink a potion.\nPRESS 4 to rest.\nPRESS 'x' to quit the game.");
+		System.out.println("\t WHEN IN COMBAT: \nPRESS 1 to ATTACK\nPRESS 2 to BLOCK\nPRESS 3 To RUN");
+		System.out.println("---------------------------------------------------------------------");
+		System.out.println("\tPlayer Health: " + Player.getPlayerHealth() + "\tPlayer Stamina: " + Player.getPlayerStamina() + "\tHealth Potions: " + Player.getPlayerPotions());
 		
 		GAME: // label needed for later to return to the beginning of the game (death, or restart). Make other labels within the While loop to call to certain events. 
 		while (running) {
