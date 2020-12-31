@@ -8,6 +8,7 @@ package textbasedrpg;
  *************************************************************************************************/
 public class Player {
 	private int playerHealth = 100;
+	private int playerMaxHealth = 175;
 	private int playerStamina = 100;
 	private int playerMaxPotions = 5;
 	private int playerAttack = 35;
@@ -18,12 +19,32 @@ public class Player {
 		return playerHealth;
 	}
 	
+	public void setPlayerHealth(int newHealth) {
+		this.playerHealth = newHealth;
+	}
+	
+	public int getPlayerMaxHealth() {
+		return playerMaxHealth;
+	}
+	
+	public void getPlayerHealth(int newMaxHealth) {
+		this.playerMaxHealth = newMaxHealth;
+	}
+	
 	public int getPlayerStamina() {
 		return playerStamina;
 	}
 	
+	public void setPlayerStamina(int newStam) {
+		this.playerStamina = newStam;
+	}
+	
 	public int getPlayerAttack() {
 		return playerAttack;
+	}
+	
+	public void setPlayerAttack(int newAtt) {
+		this.playerAttack = newAtt;
 	}
 	
 	public int getPlayerMaxPotions() {
@@ -34,7 +55,15 @@ public class Player {
 		return healthPotionHeal;
 	}
 	
+	public void setHealthPotionHeal(int newPotHeal) {
+		this.healthPotionHeal = newPotHeal;
+	}
+	
 	public int getHealthPotionDropChance() {
 		return healthPotionDropChance;
+	}
+	
+	public void setHealthPotionDropChance(int newDropchance) {
+		this.healthPotionDropChance = newDropchance;
 	}
 }
