@@ -25,7 +25,8 @@ public class Main {
 		System.out.println("What is your Name, Traveler?");
 		String inputStr = in.nextLine();
 		Player.setPlayerName(inputStr);
-		System.out.println("\t # Welcome to the Dungeon of Holt, " + Player.getPlayerName() + ". # \n--------------------------------------------------------------------------");
+		System.out.println("\t # Welcome to the Dungeon of Holt, " + Player.getPlayerName() +
+				". # \n--------------------------------------------------------------------------\n");
 		System.out.println("It seems you've lost your way...\nYou must fight your way out of here...\nIf you are going to make it out alive..\nGood luck."
 							+ "\n--------------------------------------------------------------------------");
 		//Instructions
@@ -71,18 +72,4 @@ public class Main {
 			running = false;//Test to break the while loop, saving memory while testing ofc.
 		}
 	}
-	
-//	public void startCombat() {
-//		Random rand = new Random();
-//		Monster Monster = new Monster();
-//		//this method should start the combat block, while in this 
-//		int enemyHealth = rand.nextInt(Monster.getMaxEnemyHealth());
-//		String enemyName = Monster.RandomEnemy();
-//		System.out.println("COMBAT: A" + enemyName + "Has appeared!");
-//		
-//		//While enemy is alive
-//		while (enemyHealth > 0) {
-//			System.out.println("");
-//		}
-//	}
 }
