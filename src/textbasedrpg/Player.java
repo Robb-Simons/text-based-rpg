@@ -5,7 +5,7 @@ package textbasedrpg;
  * Program name: Text-based RPG project
  * Program Desc:  
  *TODO: make getters and setters for all variables here to be executed in Main.java
- *TODO: Create moveForward(), Attack(), Block(), drinkPotion();                                       
+ *TODO: Create moveForward(), Attack(), Block(), drinkPotion() and Rest();                                       
  *************************************************************************************************/
 public class Player {
 	private String playerName = "Traveler";
@@ -116,4 +116,21 @@ public class Player {
 	public void setHealthPotionDropChance(int newDropchance) {
 		this.healthPotionDropChance = newDropchance;
 	}
+	
+	public void moveForward() {
+		
+	}
+	
+	public void Rest() {
+		
+	}
+	
+	public void Block() {
+		
+	}
+	
+	public void Attack() {
+		
+	}
+	
 }

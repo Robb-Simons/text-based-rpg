@@ -21,6 +21,7 @@ public class Main {
 		Random rand = new Random();
 		
 		//Start game sequence. 
+		Combat.startCombat();
 		System.out.println("What is your Name, Traveler?");
 		String inputStr = in.nextLine();
 		Player.setPlayerName(inputStr);
@@ -70,4 +71,18 @@ public class Main {
 			running = false;//Test to break the while loop, saving memory while testing ofc.
 		}
 	}
+	
+//	public void startCombat() {
+//		Random rand = new Random();
+//		Monster Monster = new Monster();
+//		//this method should start the combat block, while in this 
+//		int enemyHealth = rand.nextInt(Monster.getMaxEnemyHealth());
+//		String enemyName = Monster.RandomEnemy();
+//		System.out.println("COMBAT: A" + enemyName + "Has appeared!");
+//		
+//		//While enemy is alive
+//		while (enemyHealth > 0) {
+//			System.out.println("");
+//		}
+//	}
 }
