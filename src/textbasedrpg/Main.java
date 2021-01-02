@@ -73,6 +73,11 @@ public class Main {
 			//TODO: Announce Floor via Environment.java
 			//TODO: Roll for Combat after entering room
 			//TODO: add Combat.startCombat();
+			//TODO: add Combat.combatResolve();
+			//TODO: add continue label to continue playing after combat resolves.
+			//TODO:Add system input for next move.
+			//TODO: add If conditional for move rest drink and scan.
+			//TODO: if(input2==1){Player.moveForward();}
 			running = false;//Test to break the while loop, saving memory while testing ofc.
 		}
 	}
