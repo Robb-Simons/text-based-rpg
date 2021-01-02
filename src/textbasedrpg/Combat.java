@@ -52,7 +52,8 @@ public class Combat {
 				//roll to see if flee
 
 			}
-
+			
+			//This just stops the while loop.
 			enemyHealth = 0;
 		}
 	}
