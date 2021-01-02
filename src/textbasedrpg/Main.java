@@ -69,6 +69,10 @@ public class Main {
 		GAME_START: // label needed for later to return to the beginning of the game (death, or restart). Make other labels within the While loop to call to certain events. 
 		while (running) {
 			//Game Start.
+			
+			//TODO: Announce Floor via Environment.java
+			//TODO: Roll for Combat after entering room
+			//TODO: add Combat.startCombat();
 			running = false;//Test to break the while loop, saving memory while testing ofc.
 		}
 	}
