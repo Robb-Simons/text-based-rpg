@@ -36,14 +36,20 @@ public class Combat {
 			int input = in.nextInt();
 			//Attack
 			if (input == 1) {
+				System.out.println("You lunge forward and strike the " + enemyName + "!!");
+				//roll weapon damage
 
 			}
 			//Block
 			else if (input == 2) {
+				System.out.println("You attempt to cower behind your shield!");
+				//roll to see if block
 
 			}
 			//Run chance
 			if (input == 3) {
+				System.out.println("You attempt to flee!");
+				//roll to see if flee
 
 			}
 
