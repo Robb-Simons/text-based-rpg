@@ -21,7 +21,7 @@ public class Main {
 		Random rand = new Random();
 		
 		//Start game sequence. 
-		Combat.startCombat();
+		Combat.startCombat();//shitty way to text combat features atm, but its workin so.. its stayin..
 		System.out.println("What is your Name, Traveler?");
 		String inputStr = in.nextLine();
 		Player.setPlayerName(inputStr);
@@ -64,7 +64,7 @@ public class Main {
 			
 			if (inputI == 4) {
 				//Traveler
-				System.out.println("You have Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
+				System.out.println("You have Chosen: " + Player.getClassName() + ". Wait... Did I tell you about this? Anyway, Good Choice. Your stats are: ");
 			}
 		GAME_START: // label needed for later to return to the beginning of the game (death, or restart). Make other labels within the While loop to call to certain events. 
 		while (running) {
