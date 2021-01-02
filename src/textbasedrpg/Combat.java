@@ -45,12 +45,15 @@ public class Combat {
 			else if (input == 2) {
 				System.out.println("You attempt to cower behind your shield!");
 				//roll to see if block
+				//Block
+				Player.Block();
 
 			}
 			//Run chance
 			if (input == 3) {
 				System.out.println("You attempt to flee!");
 				//roll to see if flee
+				Player.Run();
 
 			}
 			

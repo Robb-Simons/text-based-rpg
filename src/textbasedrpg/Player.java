@@ -131,6 +131,10 @@ public class Player {
 		
 	}
 	
+	public void Run() {
+		
+	}
+	
 	public void Attack() {
 		//TODO: Populate me!
 	}
