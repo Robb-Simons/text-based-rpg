@@ -38,6 +38,7 @@ public class Combat {
 			if (input == 1) {
 				System.out.println("You lunge forward and strike the " + enemyName + "!!");
 				//roll weapon damage
+				Player.Attack();
 
 			}
 			//Block
