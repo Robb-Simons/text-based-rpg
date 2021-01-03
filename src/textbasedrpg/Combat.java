@@ -45,12 +45,11 @@ public class Combat {
 				int hit = Player.Attack();
 				System.out.println("You lunge forward and strike the " + enemyName + "!!");
 				System.out.println("You dealt " + hit + " damage!");
-				enemyNewHealth = enemyHealth - hit;
-				System.out.println("The " + enemyName + " has " + enemyNewHealth + " health left!");
+				enemyNewHealth = enemyNewHealth - hit;
 				if (enemyHealth <= 0) {
 					System.out.println("You have defeated " + enemyName + "!!");
-					break;
 				} else {
+					System.out.println("The " + enemyName + " has " + enemyNewHealth + " health left!");
 					continue COMBAT_START;
 				}
 			}
