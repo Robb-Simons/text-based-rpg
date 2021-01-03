@@ -3,11 +3,9 @@ package textbasedrpg;
  * Written by: Robert Simons 
  * Composition date: 12-30-2020
  * Program name: Text-based RPG project
- * Program Desc: 
- * TODO:make getters and setters for all variables here to be executed in Main.java      
- * TODO:add things like room names, and loot to go inside dungeons.    
+ * Program Desc:     
  * TODO: add announceFloor() method
- * TODO: Create specialRoom(array) and method for boss/mechants etc;                                
+ * TODO: Create specialRoom variableand method for boss/mechants etc;                                
  *************************************************************************************************/
 public class Environment {
 	private String[] roomNameAdj = {"Dank",//0

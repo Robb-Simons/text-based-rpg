@@ -117,6 +117,7 @@ public class Player {
 		this.healthPotionDropChance = newDropchance;
 	}
 	
+	//Player actions
 	
 	//TODO:populate all of these methods 
 	public void moveForward() {
