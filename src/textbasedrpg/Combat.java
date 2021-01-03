@@ -14,11 +14,13 @@ public class Combat {
 	private Random rand = new Random();
 	Monster Monster = new Monster();
 	Player Player = new Player();
-	// Might need to put the variables here so the other methods can use it. 
-	//TODO: Test this.
+	// Might need to put the variables here so the other methods can use it.
+	// TODO: Test this.
 	int enemyHealth = rand.nextInt(Monster.getMaxEnemyHealth());
 	String enemyName = Monster.RandomEnemy();
 	private int enemyNewHealth = enemyHealth;
+	private int enemySwing = Monster.Attack();
+	private int hit = Player.Attack();
 
 	public void startCombat() {
 		// this method should start the combat block, while in this
@@ -41,39 +43,42 @@ public class Combat {
 			System.out.println("What are you going to do?");
 			int input = in.nextInt();
 			// Attack
-			if (input == 1) {
-				int hit = Player.Attack();
-				System.out.println("You lunge forward and strike the " + enemyName + "!!");
-				System.out.println("You dealt " + hit + " damage!");
-				enemyNewHealth = enemyNewHealth - hit;
-				if (enemyHealth <= 0) {
-					System.out.println("You have defeated " + enemyName + "!!");
-				} else {
-					System.out.println("The " + enemyName + " has " + enemyNewHealth + " health left!");
-					continue COMBAT_START;
+			if (input == 1 || input == 2 || input == 3) {
+				if (input == 1) {
+					System.out.println("You lunge forward and strike the " + enemyName + "!!");
+					System.out.println("You dealt " + hit + " damage!");
+					enemyNewHealth = enemyNewHealth - hit;
+					if (enemyHealth <= 0) {
+						System.out.println("You have defeated " + enemyName + "!!");
+					} else {
+						System.out.println("The " + enemyName + " has " + enemyNewHealth + " health left!");
+						continue COMBAT_START;
+					}
 				}
-			}
-			// Block
-			else if (input == 2) {
-				System.out.println("You attempt to cower behind your shield!");
-				// roll to see if block
 				// Block
-				Player.Block();
-				continue COMBAT_START;
+				else if (input == 2) {
+					System.out.println("You attempt to cower behind your shield!");
+					// roll to see if block
+					// Block
+					Player.Block();
+					continue COMBAT_START;
 
-			}
-			// Run chance
-			if (input == 3) {
-				System.out.println("You attempt to flee!");
-				// roll to see if flee
+				}
+				// Run chance
+				if (input == 3) {
+					System.out.println("You attempt to flee!");
+					// roll to see if flee
 //				if (Player.Run() == true) {
 //					System.out.println("you've run away from the" + enemyName + "!");
-//					break;
 //				} else {
 //				
 //					continue COMBAT_START;
 //			}
 
+				}
+			}else {
+				System.out.println("\t!!!Invalid Input!!!");
+				System.out.println("\tPlease try Again.");
 			}
 
 			// When Enemy Dies.

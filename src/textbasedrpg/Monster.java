@@ -4,7 +4,8 @@ package textbasedrpg;
  * Composition date: 12-29-2020
  * Program name: Text-based RPG project
  * Program Desc: 
- * TODO:make getters and setters for all variables here to be executed in Main.java                                        
+ * TODO:make getters and setters for all variables here to be executed in Main.java   
+ * TODO: make a Attack() method here                                      
  *************************************************************************************************/
 import java.util.Random;
 
@@ -42,5 +43,11 @@ public class Monster {
 	public String RandomEnemy() {
 		enemy = Enames[rand.nextInt(Enames.length)];
 		return enemy;
+	}
+	
+	public int Attack() {
+		int finalAttack = rand.nextInt(getMaxEnemyAttack());
+		return finalAttack;
+		
 	}
 }
