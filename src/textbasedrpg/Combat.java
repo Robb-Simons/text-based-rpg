@@ -14,13 +14,13 @@ public class Combat {
 	Monster Monster = new Monster();
 	Player Player = new Player();
 	//Might need to put the variables here so the other methods can use it. TODO: Test this.
-//	int enemyHealth = rand.nextInt(Monster.getMaxEnemyHealth());
-//	String enemyName = Monster.RandomEnemy();
+	int enemyHealth = rand.nextInt(Monster.getMaxEnemyHealth());
+	String enemyName = Monster.RandomEnemy();
 	
 	public void startCombat() {
 		// this method should start the combat block, while in this
-		int enemyHealth = rand.nextInt(Monster.getMaxEnemyHealth());
-		String enemyName = Monster.RandomEnemy();
+//		int enemyHealth = rand.nextInt(Monster.getMaxEnemyHealth());
+//		String enemyName = Monster.RandomEnemy();
 		System.out.println("\t!#> " + enemyName + " has appeared! <#! ");
 
 		// While enemy is alive

@@ -16,7 +16,7 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		Player Player = new Player();
 		Monster Monster = new Monster();
-		Environment Envionment = new Environment();
+		Environment Environment = new Environment();
 		Combat Combat = new Combat();
 		Random rand = new Random();
 		
@@ -70,14 +70,15 @@ public class Main {
 		while (running) {
 			//Game Start.
 			
-			//TODO: Announce Floor via Environment.java
+			//Announce Floor via Environment.java
+			Environment.announceFloor();
 			//TODO: Roll for Combat after entering room
 			//TODO: add Combat.startCombat();
 			//TODO: add Combat.combatResolve();
 			//TODO: add continue label to continue playing after combat resolves.
 			//TODO:Add system input for next move.
 			//TODO: add If conditional for move rest drink and scan.
-			//TODO: if(input2==1){Player.moveForward();}
+			//TODO: if(input2==1){Player.moveForward();}...
 			running = false;//Test to break the while loop, saving memory while testing ofc.
 		}
 	}

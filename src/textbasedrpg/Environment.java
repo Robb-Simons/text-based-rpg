@@ -4,10 +4,12 @@ package textbasedrpg;
  * Composition date: 12-30-2020
  * Program name: Text-based RPG project
  * Program Desc:     
- * TODO: add announceFloor() method
- * TODO: Create specialRoom variableand method for boss/mechants etc;                                
+ * TODO: Create specialRoom variable and method for boss/mechants etc;                                
  *************************************************************************************************/
+import java.util.Random;
+
 public class Environment {
+	Random rand = new Random();
 	private String[] roomNameAdj = {"Dank",//0
 									"Damp",//1
 									"Dark",//2
@@ -32,5 +34,17 @@ public class Environment {
 	
 	private String bossRoom = "The Throne Room";
 	private String breakRoom = "Friendly Merchants Chamber";
+	
+	public String announceFloor() {
+		//This announces the floor in 2 strings. 
+		//x is the adjective y is the floor name.
+		//together they create a large amount of variety.
+		String x = "";
+		String y = "";
+		x = roomNameAdj[rand.nextInt(roomNameAdj.length)];
+		y = roomNames[rand.nextInt(roomNames.length)];
+		String Announcement = "You are in the "+ x + " " + y + "..";
+		return Announcement;
+	}
 	
 }
