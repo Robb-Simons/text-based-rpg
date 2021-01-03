@@ -83,12 +83,10 @@ public class Main {
 			NEW_FLOOR://Label to reuse these lines
 			//Announce Floor via Environment.java
 			System.out.println(Environment.announceFloor());
-			//TODO: Roll for Combat after entering room
-			
 			//testing roll for combat and its fairness 
 			//TODO: make a method to call this code when stepping forward (or scanning the area).
+			//TODO: if combat is not started, allow player to investigate the room and use Out of Combat options before moving to next room
 			if (rand.nextInt(1000) >= 620) {
-				//TODO: add Combat.startCombat();
 				Combat.startCombat();
 			}
 			//TODO: add continue label to continue playing after combat resolves.
