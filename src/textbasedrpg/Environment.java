@@ -31,4 +31,8 @@ public class Environment {
 			"Mage's Chamber",//11
 			"Portal Room",//12
 			};
+	
+	private String bossRoom = "The Throne Room";
+	private String breakRoom = "Friendly Merchants Chamber";
+	
 }

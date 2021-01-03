@@ -13,6 +13,9 @@ public class Combat {
 	private Random rand = new Random();
 	Monster Monster = new Monster();
 	Player Player = new Player();
+	//Might need to put the variables here so the other methods can use it. TODO: Test this.
+//	int enemyHealth = rand.nextInt(Monster.getMaxEnemyHealth());
+//	String enemyName = Monster.RandomEnemy();
 	
 	public void startCombat() {
 		// this method should start the combat block, while in this
@@ -60,5 +63,13 @@ public class Combat {
 			//This just stops the while loop.
 			enemyHealth = 0;
 		}
+	}
+	
+	public void outOfCombat() {
+		//TODO: populate with the While loop for Gameplay outside of combat (if conditionals relying on the numbers generated from Main.java (just to make it spicy))
+	}
+	
+	public void combatResolve() {
+		//TODO: print to screen after victory against an enemy. 
 	}
 }
