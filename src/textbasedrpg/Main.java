@@ -59,28 +59,31 @@ public class Main {
 			if (inputI == 1) {
 				// Warrior
 				Player.setClassName(1);
+				Player.setWarClass();
 				System.out.println("You have Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
-				//Player.printStats(1);
+				System.out.println(Player.printStats());
 			}
 
 			if (inputI == 2) {
 				// Rogue
 				Player.setClassName(2);
+				Player.setRogClass();
 				System.out.println("You have Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
-				//Player.printStats(2);
+				System.out.println(Player.printStats());
 			}
 
 			if (inputI == 3) {
 				// Alchemist
 				Player.setClassName(3);
+				Player.setAlcClass();
 				System.out.println("You have Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
-				//Player.printStats(3);
+				System.out.println(Player.printStats());
 			}
 
 			if (inputI == 4) {
 				// Traveler
 				System.out.println("You have Chosen: " + Player.getClassName() + ". Wait... Did I tell you about this? Anyway, Good Choice. Your stats are: ");
-				//Player.printStats(4);
+				System.out.println(Player.printStats());
 			}
 		} else {
 			running = false;

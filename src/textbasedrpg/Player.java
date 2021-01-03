@@ -33,6 +33,34 @@ public class Player {
 		this.gold = newGold;
 	}
 	
+	public void setWarClass() {
+		playerHealth = playerHealth + 75;
+		playerAttack = playerAttack + 25;
+		playerStamina = playerStamina - 20;
+		playerMaxPotions = playerMaxPotions -2;
+	}
+	
+	public void setRogClass() {
+		playerHealth = playerHealth -25;
+		playerAttack = playerAttack+20;
+		playerStamina = playerStamina +10;
+	}
+	
+	public void setAlcClass() {
+		playerHealth = playerHealth -50;
+		playerAttack = playerAttack - 10;
+		playerStamina = playerStamina - 30;
+		playerMaxPotions = playerMaxPotions + 4;
+	}
+	
+	public String printStats() {
+		String statString = "";
+
+	
+		statString = "HP: " + getPlayerHealth()+"\nStamina: " + getPlayerStamina() + "\nMax Potions: " + getPlayerMaxPotions();
+		return statString;
+	}
+	
 	public String getClassName() {
 		return finalClassName;
 	}
