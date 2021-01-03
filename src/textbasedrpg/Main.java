@@ -20,6 +20,11 @@ public class Main {
 		Combat Combat = new Combat();
 		Random rand = new Random();
 		
+		//TODO: Variables to control RNG within the while loop
+		int rngesus_Combat = rand.nextInt(rand.nextInt(1000));//TODO: create if when entering a room roll for combat 62% chance so if rngesus_combat >= 620 Combat.startCombat()
+		int rngesus_Attack = rand.nextInt(Player.getPlayerAttack());
+		int rngesus_Block = rand.nextInt(Player.getPlayerMaxBlock());
+		
 		//Start game sequence. 
 		Combat.startCombat();//shitty way to text combat features atm, but its workin so.. its stayin..
 		System.out.println("What is your Name, Traveler?");
