@@ -7,7 +7,10 @@ package textbasedrpg;
  *TODO: make getters and setters for all variables here to be executed in Main.java
  *TODO: Create moveForward(), Attack(), Block(), drinkPotion() and Rest();                                       
  *************************************************************************************************/
+import java.util.Random;
+
 public class Player {
+	Random rand = new Random();
 	private String playerName = "Traveler";
 	private int gold = 0;
 	private int playerHealth = 100;
@@ -15,7 +18,7 @@ public class Player {
 	private int playerStamina = 100;
 	private int playerMaxPotions = 5;
 	private int playerAttack = 35;
-	private int playerMaxBlock = -10;
+	private int playerMaxBlock = 10;
 	private int playerPotions = 2;
 	private int healthPotionHeal = 25;
 	private int healthPotionDropChance = 50;
@@ -136,8 +139,9 @@ public class Player {
 		
 	}
 	
-	public void Attack() {
-		//TODO: Populate me!
+	public int Attack() {
+		int finalAttack = rand.nextInt(getPlayerAttack());
+		return finalAttack;
 		
 	}
 	
