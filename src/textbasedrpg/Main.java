@@ -84,7 +84,9 @@ public class Main {
 			//Announce Floor via Environment.java
 			System.out.println(Environment.announceFloor());
 			//TODO: Roll for Combat after entering room
-			//testing roll for combat and its fairness TODO: make a method to call this code when stepping forward (or scanning the area).
+			
+			//testing roll for combat and its fairness 
+			//TODO: make a method to call this code when stepping forward (or scanning the area).
 			if (rand.nextInt(1000) >= 620) {
 				//TODO: add Combat.startCombat();
 				Combat.startCombat();
