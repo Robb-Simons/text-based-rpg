@@ -5,7 +5,7 @@ package textbasedrpg;
  * Composition date: 12-30-2020
  * Program name: Text-based RPG project
  * Program Desc: Program handles all combat engagements.  
- * TODO: Create startCombat()method. 
+ * TODO: Make the monster swing back.
  *************************************************************************************************/
 import java.util.Random;
 import java.util.Scanner;
@@ -14,8 +14,8 @@ public class Combat {
 	private Random rand = new Random();
 	Monster Monster = new Monster();
 	Player Player = new Player();
-	// Might need to put the variables here so the other methods can use it. TODO:
-	// Test this.
+	// Might need to put the variables here so the other methods can use it. 
+	//TODO: Test this.
 	int enemyHealth = rand.nextInt(Monster.getMaxEnemyHealth());
 	String enemyName = Monster.RandomEnemy();
 	private int enemyNewHealth = enemyHealth;
