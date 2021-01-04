@@ -8,6 +8,7 @@ package textbasedrpg;
  * TODO:populate with variables that will handle events in the game.                                        
  *************************************************************************************************/
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
 
 public class Main {
@@ -47,69 +48,77 @@ public class Main {
 		System.out.println("\tHealth: " + Player.getPlayerHealth() + "\tStamina: " + Player.getPlayerStamina()
 				+ "\tHealth Potions: " + Player.getPlayerPotions());
 		System.out.println("--------------------------------------------------------------------------");
-		// Class Selection
-		System.out.println("\t # What Class would you like to be? # ");
-		System.out.println("Enter 1 for Warrior (+75 HP) (+25 Attack) (-20 Stamina) (-2 Max Potions)\n");
-		System.out.println("Enter 2 for Rogue (-25 HP) (+20 Attack) (+10 Stamina) (Default Max Potions)\n");
-		System.out.println("Enter 3 for Alchemist (-50 HP) (-10 Attack) (-30 Stamina) (+4 Max Potions)\n");
-		int inputI = in.nextInt();
-		// TODO: make this a switch statement.. I dont think it needs to be IF
-		// conditionals. Someone if you are reading this help. Im not sure.
-		if (inputI == 1 || inputI == 2 || inputI == 3 || inputI == 4) {
-			if (inputI == 1) {
-				// Warrior
-				Player.setClassName(1);
-				Player.setWarClass();
-				System.out.println("You have Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
-				System.out.println(Player.printStats());
-			}
-
-			if (inputI == 2) {
-				// Rogue
-				Player.setClassName(2);
-				Player.setRogClass();
-				System.out.println("You have Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
-				System.out.println(Player.printStats());
-			}
-
-			if (inputI == 3) {
-				// Alchemist
-				Player.setClassName(3);
-				Player.setAlcClass();
-				System.out.println("You have Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
-				System.out.println(Player.printStats());
-			}
-
-			if (inputI == 4) {
-				// Traveler
-				System.out.println("You have Chosen: " + Player.getClassName() + ". Wait... Did I tell you about this? Anyway, Good Choice. Your stats are: ");
-				System.out.println(Player.printStats());
-			}
-		} else {
-			running = false;
-			System.out.println("Terminated goodbye!");
-			System.exit(0);
-		}
+		// TODO: fix this logic to work in the game, might need to make this in
+		// Player.java.
+//		// Class Selection
+//		System.out.println("\t # What Class would you like to be? # ");
+//		System.out.println("Enter 1 for Warrior (+75 HP) (+25 Attack) (-20 Stamina) (-2 Max Potions)\n");
+//		System.out.println("Enter 2 for Rogue (-25 HP) (+20 Attack) (+10 Stamina) (Default Max Potions)\n");
+//		System.out.println("Enter 3 for Alchemist (-50 HP) (-10 Attack) (-30 Stamina) (+4 Max Potions)\n");
+//		int inputI = in.nextInt();
+//		// TODO: make this a switch statement.. I dont think it needs to be IF
+//		// conditionals. Someone if you are reading this help. Im not sure. Help.
+//		if (inputI == 1 || inputI == 2 || inputI == 3 || inputI == 4) {
+//			if (inputI == 1) {
+//				// Warrior
+//				Player.setClassName(1);
+//				Player.setWarClass();
+//				System.out.println("You have Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
+//				System.out.println(Player.printStats());
+//			}
+//
+//			if (inputI == 2) {
+//				// Rogue
+//				Player.setClassName(2);
+//				Player.setRogClass();
+//				System.out.println("You have Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
+//				System.out.println(Player.printStats());
+//			}
+//
+//			if (inputI == 3) {
+//				// Alchemist
+//				Player.setClassName(3);
+//				Player.setAlcClass();
+//				System.out.println("You have Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
+//				System.out.println(Player.printStats());
+//			}
+//
+//			if (inputI == 4) {
+//				// Traveler
+//				System.out.println("You have Chosen: " + Player.getClassName() + ". Wait... Did I tell you about this? Anyway, Good Choice. Your stats are: ");
+//				System.out.println(Player.printStats());
+//			}
+//		} else {
+//			running = false;
+//			System.out.println("Terminated goodbye!");
+//			System.exit(0);
+//		}
 		GAME_START: // label needed for later to return to the beginning of the game (death, or
-					// restart). Make other labels within the While loop to call to certain events.
-		while (running) {
-			// Game Start.
-			NEW_FLOOR: // Label to reuse these lines
-			// Announce Floor via Environment.java
-			System.out.println(Environment.announceFloor());
-			// TODO: make a method to call this code when stepping forward (or scanning the
-			// area).
-			// TODO: if combat is not started, allow player to investigate the room and use
-			// Out of Combat options before moving to next room
-			// testing roll for combat and its fairness (increased for testing 62 is pretty average.)
-			if (rand.nextInt(1000) >= 730) {
-				Combat.startCombat();
+		try { // restart). Make other labels within the While loop to call to certain events.
+			while (running) {
+				// Game Start.
+				NEW_FLOOR: // Label to reuse these lines
+				// Announce Floor via Environment.java
+				System.out.println(Environment.announceFloor());
+				TimeUnit.SECONDS.sleep(2);
+				// TODO: make a method to call this code when stepping forward (or scanning the
+				// area).
+				// TODO: if combat is not started, allow player to investigate the room and use
+				// Out of Combat options before moving to next room
+				// testing roll for combat and its fairness (increased for testing 62 is pretty
+				// average.)
+				if (rand.nextInt(1000) >= 0) {
+					Combat.startCombat();
+				}
+				// TODO: add continue label to continue playing after combat resolves.
+				// TODO: Add system input for next move.
+				// TODO: add If conditional for move rest drink and scan.
+				// TODO: if(input2==1){Player.moveForward();}...
+				running = false;// Test to break the while loop, saving memory while testing ofc.
 			}
-			// TODO: add continue label to continue playing after combat resolves.
-			// TODO: Add system input for next move.
-			// TODO: add If conditional for move rest drink and scan.
-			// TODO: if(input2==1){Player.moveForward();}...
-			running = false;// Test to break the while loop, saving memory while testing ofc.
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 }
