@@ -22,12 +22,6 @@ public class Main {
 		Combat Combat = new Combat();
 		Random rand = new Random();
 
-		// TODO: Variables to control RNG within the while loop
-		// TODO: create if when entering a room roll for combat 62% chance so if
-		// rngesus_combat >= 620 Combat.startCombat()
-		int rngesus_Attack = rand.nextInt(Player.getPlayerAttack());
-		int rngesus_Block = rand.nextInt(Player.getPlayerMaxBlock());
-
 		// Start game sequence.
 //		Combat.startCombat();//shitty way to text combat features atm, but its workin so.. its stayin..
 		System.out.println("What is your Name, Traveler?");
@@ -96,30 +90,24 @@ public class Main {
 		}
 *************************************************************************************************************************************************/
 		GAME_START: // label needed for later to return to the beginning of the game (death, or
-		try { // restart). Make other labels within the While loop to call to certain events.
+					// restart). Make other labels within the While loop to call to certain events.
+			try { 
 			while (running) {
+				//Variables needed for game
+				String floorName = Environment.announceFloor();
 				// Game Start.
 				NEW_FLOOR: // Label to reuse these lines
 				// Announce Floor via Environment.java
-				System.out.println(Environment.announceFloor());
+				System.out.println(floorName);
 				TimeUnit.SECONDS.sleep(2);
-				// TODO: make a method to call this code when stepping forward (or scanning the
-				// area).
-				// TODO: if combat is not started, allow player to investigate the room and use
-				// Out of Combat options before moving to next room
-				// testing roll for combat and its fairness (increased for testing 62 is pretty
-				// average.)
-				if (rand.nextInt(1000) >= 0) {
+				if (rand.nextInt(1000) >= 250) {
 					Combat.startCombat();
+				} else {
+					Combat.outOfCombat();
 				}
-				// TODO: add continue label to continue playing after combat resolves.
-				// TODO: Add system input for next move.
-				// TODO: add If conditional for move rest drink and scan.
-				// TODO: if(input2==1){Player.moveForward();}...
 				running = false;// Test to break the while loop, saving memory while testing ofc.
 			}
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
