@@ -163,6 +163,8 @@ public class Player {
 		boolean x = false;
 		if (rand.nextInt(100) >49) {
 			x=true;
+		} else {
+			x=false;
 		}
 		return x;
 	}
@@ -171,6 +173,8 @@ public class Player {
 		boolean x = false;
 		if (rand.nextInt(100) >49) {
 			x=true;
+		} else {
+			x=false;
 		}
 		return x;
 		

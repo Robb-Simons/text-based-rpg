@@ -100,7 +100,7 @@ public class Main {
 				// Announce Floor via Environment.java
 				System.out.println(floorName);
 				TimeUnit.SECONDS.sleep(2);
-				if (rand.nextInt(1000) >= 250) {
+				if (rand.nextInt(1000) >= 0) {
 					Combat.startCombat();
 				} else {
 					Combat.outOfCombat();
