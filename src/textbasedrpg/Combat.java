@@ -54,6 +54,7 @@ public class Combat {
 						// Player Swinging
 						enemySwing = rand.nextInt(Monster.Attack());
 						System.out.println("You lunge forward and strike the " + enemyName + "!!");
+						TimeUnit.SECONDS.sleep(2);
 						System.out.println("You dealt " + hit + " damage!");
 						// Monster Swinging
 						System.out.println(enemyName + " dealt " + enemySwing + " Damage!");
@@ -92,7 +93,7 @@ public class Combat {
 							// adjust health value
 							playerNewHealth = playerNewHealth - enemySwing;
 						} else {
-							System.out.println(enemyName + " dealt " + enemySwing + " Damage!");
+							System.out.println(enemyName + " dealt " + enemySwing + " damage!");
 							playerNewHealth = playerNewHealth - enemySwing;
 						}
 						if (playerNewHealth <= 0) {
@@ -107,6 +108,7 @@ public class Combat {
 						System.out.println("You attempt to flee!");
 						// roll to see if flee
 						if (Player.Run() == true) {
+							TimeUnit.SECONDS.sleep(2);
 							System.out.println("you've run away from the " + enemyName + "!");
 							break COMBAT_START;
 						} else {
