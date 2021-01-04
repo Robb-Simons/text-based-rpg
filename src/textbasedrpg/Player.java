@@ -159,11 +159,20 @@ public class Player {
 		
 	}
 	
-	public void Block() {
-		
+	public boolean Block() {
+		boolean x = false;
+		if (rand.nextInt(100) >49) {
+			x=true;
+		}
+		return x;
 	}
 	
-	public void Run() {
+	public boolean Run() {
+		boolean x = false;
+		if (rand.nextInt(100) >49) {
+			x=true;
+		}
+		return x;
 		
 	}
 	

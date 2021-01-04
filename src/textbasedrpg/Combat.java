@@ -17,7 +17,9 @@ public class Combat {
 	// Might need to put the variables here so the other methods can use it.
 	// TODO: Test this.
 	int enemyHealth = rand.nextInt(Monster.getMaxEnemyHealth());
+	int playerHealth = Player.getPlayerHealth();
 	String enemyName = Monster.RandomEnemy();
+	private int playerNewHealth = playerHealth;
 	private int enemyNewHealth = enemyHealth;
 	private int enemySwing = Monster.Attack();
 	private int hit = Player.Attack();
@@ -30,7 +32,7 @@ public class Combat {
 
 		// While enemy is alive
 		COMBAT_START: while (enemyNewHealth > 0) {
-			System.out.println(Player.getPlayerName() + "\n     HP: " + Player.getPlayerHealth() + "     Stamina: "
+			System.out.println(Player.getPlayerName() + "\n     HP: " + playerNewHealth + "     Stamina: "
 					+ Player.getPlayerStamina());
 			System.out.println("----------------------------");
 			System.out.println(enemyName + "     HP: " + enemyNewHealth);
@@ -45,9 +47,17 @@ public class Combat {
 			// Attack
 			if (input == 1 || input == 2 || input == 3) {
 				if (input == 1) {
+					//Player Swinging
 					System.out.println("You lunge forward and strike the " + enemyName + "!!");
 					System.out.println("You dealt " + hit + " damage!");
+					//Monster Swinging
+					System.out.println(enemyName + " dealt " + enemySwing + " Damage!");
 					enemyNewHealth = enemyNewHealth - hit;
+					playerNewHealth = playerNewHealth - enemySwing;
+					if(playerNewHealth <= 0) {
+						System.out.println("\t!@#$%^ GAME OVER ^%$#@!");
+						System.exit(0);
+					}
 					if (enemyHealth <= 0) {
 						System.out.println("You have defeated " + enemyName + "!!");
 					} else {
@@ -60,7 +70,19 @@ public class Combat {
 					System.out.println("You attempt to cower behind your shield!");
 					// roll to see if block
 					// Block
-					Player.Block();
+					if(Player.Block()==true) {
+						System.out.println(enemyName + "trys to deal " + enemySwing + " damage!");
+						enemySwing = enemySwing - Player.getPlayerMaxBlock();
+						System.out.println("You took " + enemySwing + " damage");
+						playerNewHealth = playerNewHealth - enemySwing;
+					} else {
+						System.out.println(enemyName + " dealt " + enemySwing + " Damage!");
+						playerNewHealth = playerNewHealth - enemySwing;
+					}
+					if(playerNewHealth <= 0) {
+						System.out.println("\t!@#$%^ GAME OVER ^%$#@!");
+						System.exit(0);
+					}
 					continue COMBAT_START;
 
 				}
@@ -68,12 +90,13 @@ public class Combat {
 				if (input == 3) {
 					System.out.println("You attempt to flee!");
 					// roll to see if flee
-//				if (Player.Run() == true) {
-//					System.out.println("you've run away from the" + enemyName + "!");
-//				} else {
-//				
-//					continue COMBAT_START;
-//			}
+				if (Player.Run() == true) {
+					System.out.println("you've run away from the " + enemyName + "!");
+					break COMBAT_START;
+				} else {
+				
+					continue COMBAT_START;
+			}
 
 				}
 			}else {
