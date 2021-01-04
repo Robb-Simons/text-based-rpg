@@ -52,6 +52,7 @@ public class Combat {
 					// Attack
 					if (input == 1) {
 						// Player Swinging
+						enemySwing = rand.nextInt(Monster.Attack());
 						System.out.println("You lunge forward and strike the " + enemyName + "!!");
 						System.out.println("You dealt " + hit + " damage!");
 						// Monster Swinging
@@ -72,6 +73,7 @@ public class Combat {
 					}
 					// Block
 					if (input == 2) {
+						enemySwing = rand.nextInt(Monster.Attack());
 						System.out.println("You attempt to cower behind your shield!");
 						// Block
 						if (Player.Block() == true) {
@@ -108,7 +110,9 @@ public class Combat {
 							System.out.println("you've run away from the " + enemyName + "!");
 							break COMBAT_START;
 						} else {
-
+							enemySwing = rand.nextInt(Monster.Attack());
+							System.out.println(enemyName + " dealt " + enemySwing + " Damage!");
+							playerNewHealth = playerNewHealth - enemySwing;
 							continue COMBAT_START;
 						}
 
@@ -128,7 +132,6 @@ public class Combat {
 
 			}
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
