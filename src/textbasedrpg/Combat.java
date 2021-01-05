@@ -26,8 +26,7 @@ public class Combat {
 	private int hit = Player.Attack();
 
 	public void startCombat() {
-		// error handler for TimeUnit
-		try {
+		try { // error handler for TimeUnit
 			// this method should start the combat block, while in this
 //		int enemyHealth = rand.nextInt(Monster.getMaxEnemyHealth());
 //		String enemyName = Monster.RandomEnemy();
@@ -140,8 +139,8 @@ public class Combat {
 
 	public void outOfCombat() {
 		// TODO: populate with the While loop for Gameplay outside of combat (if
-		// conditionals relying on the numbers generated from Main.java (just to make it
-		// spicy))
+		// conditionals relying on the numbers generated from Main.java)
+		
 	}
 
 	public void combatResolve() {

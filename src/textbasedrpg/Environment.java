@@ -31,6 +31,9 @@ public class Environment {
 			"Mage's Chamber",//11
 			"Portal Room",//12
 			};
+	private String[] badLoot = {"Withered junk", "10-Day old carcass", "Glob of slime", "Rusted Coin"};//sells for 2 gold @ vendor
+	private String[] midLoot = {"Prisioner's Chain", "Dead man's Jewelry", "Chain-mail Undergarments", "Sealed-shut Steamy romance novel"};//sells for 5 gold @ vendor
+	private String[] highLoot = {"Glowing Stone", "Bag of Fine Jewels", "Mysterious Key", "King's Chaliace", "Tooth of an Old One"};//sells for 7 gold @ vendor
 	
 	private String bossRoom = "The Throne Room";
 	private String breakRoom = "Friendly Merchants Chamber";
@@ -45,6 +48,10 @@ public class Environment {
 		y = roomNames[rand.nextInt(roomNames.length)];
 		String Announcement = "You are in the "+ x + " " + y + "..";
 		return Announcement;
+	}
+	
+	public void scanRoom() {
+		//TODO: Populate me with code to check the room for extra bad guys or if there is a chest near by
 	}
 	
 }
