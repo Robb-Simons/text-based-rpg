@@ -152,9 +152,12 @@ public class Player {
 	
 	//TODO:populate all of these methods 
 	public void moveForward() {
-		
+		//populate with roll for next room
+		//after roll for next room, check for combat
+		//if no combat, allow for scan.
 	}
 	
+	//TODO: Make decision to eliminate Stamina or not. 
 	public void Rest() {
 		
 	}
