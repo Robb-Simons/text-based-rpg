@@ -144,7 +144,18 @@ public class Combat {
 		int in = OoCInput.nextInt();
 		//create blanket if preventing faulty input
 		if (in == 1 || in == 2 || in == 3 || in == 4) {
-			
+			if (in == 1) {
+				
+			}
+			if (in == 2) {
+				
+			}
+			if (in == 3) {
+				
+			}
+			if (in == 4) {
+				
+			}
 		} else {
 			System.out.println("Invalid Input. Please try again.");
 		}
