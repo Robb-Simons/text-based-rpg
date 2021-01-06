@@ -149,8 +149,11 @@ public class Player {
 	}
 	
 	//Player actions
-	
 	//TODO:populate all of these methods 
+	public void drinkPotion() {
+		
+	}
+	
 	public void moveForward() {
 		//TODO:
 		//populate with roll for next room

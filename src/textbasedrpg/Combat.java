@@ -147,16 +147,16 @@ public class Combat {
 		//create blanket if preventing faulty input
 		if (in == 1 || in == 2 || in == 3 || in == 4) {
 			if (in == 1) {
-				
+				Player.moveForward();
 			}
 			if (in == 2) {
-				
+				Player.Scan();
 			}
 			if (in == 3) {
-				
+				Player.Rest();
 			}
 			if (in == 4) {
-				
+				Player.drinkPotion();
 			}
 		} else {
 			System.out.println("Invalid Input. Please try again.");
@@ -164,7 +164,4 @@ public class Combat {
 		
 	}
 
-	public void combatResolve() {
-		// TODO: print to screen after victory against an enemy.
-	}
 }
