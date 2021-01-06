@@ -143,7 +143,7 @@ public class Combat {
 		Scanner OoCInput = new Scanner(System.in);
 		int in = OoCInput.nextInt();
 		System.out.println("It seems to be clear for a moment.\nWhat would you like to do?");
-		System.out.println("Press 1 to move on to the next room.");
+		System.out.println("Press 1 to move on to the next room.\nPress 2 to scan the room for Treasures.\nPress 3 to rest for a minute (Stamina Regen)\nPress 4 to Drink a potion");
 		//create blanket if preventing faulty input
 		if (in == 1 || in == 2 || in == 3 || in == 4) {
 			if (in == 1) {

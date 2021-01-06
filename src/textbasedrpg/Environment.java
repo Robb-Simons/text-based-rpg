@@ -50,8 +50,5 @@ public class Environment {
 		return Announcement;
 	}
 	
-	public void scanRoom() {
-		//TODO: Populate me with code to check the room for extra bad guys or if there is a chest near by
-	}
 	
 }
