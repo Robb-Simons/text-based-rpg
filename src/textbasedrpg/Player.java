@@ -152,6 +152,7 @@ public class Player {
 	
 	//TODO:populate all of these methods 
 	public void moveForward() {
+		//TODO:
 		//populate with roll for next room
 		//after roll for next room, check for combat
 		//if no combat, allow for scan.
@@ -159,7 +160,13 @@ public class Player {
 	
 	//TODO: Make decision to eliminate Stamina or not. 
 	public void Rest() {
+		//TODO: if Rest roll for combat at 5% chance, if no combat restore 10 stamina.
 		
+	}
+	
+	public void Scan() {
+		//TODO: Create logic to place here. 
+		//Random chance to open a treasure chest that has gold + a 1/3 chance at bad mid or high tier loot.
 	}
 	
 	public boolean Block() {
