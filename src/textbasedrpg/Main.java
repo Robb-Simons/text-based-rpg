@@ -1,5 +1,6 @@
 package textbasedrpg;
 
+import java.io.IOException;
 /*************************************************************************************************
  * Written by: Robert Simons 
  * Composition date: 12-29-2020
@@ -77,7 +78,7 @@ public class Main {
 		 *************************************************************************************************************************************************/
 		try {
 			while (running) {
-				for (int i = 0; i <= 15; i++) {//15 rounds
+				for (int i = 14; i <= 15; i++) {//15 rounds
 					//checks rounds if 5 or 10 stops game for a merchant round.
 					if (i == 5 || i == 10) {
 						Environment.announceMerchant();
@@ -85,9 +86,15 @@ public class Main {
 						System.out.println("Welp... Onto the next floor.");
 					} 
 					if (i == 15) {
-						//Final Boss round.
-						System.out.println("The exit is in the next room. Your adrenaline starts pumping as you see light coming from the gates.\n\n");
-						TimeUnit.SECONDS.sleep(1);
+						//Final Boss round.		    
+						System.out.println("The exit is in the next room. Your adrenaline starts pumping as you see light coming from the gates.\n");
+						for(int c =0; c < 10; c++) {
+							if (c==5) {
+								System.out.println("The ground is quaking...");
+							}
+							System.out.println("\n\n");
+							TimeUnit.SECONDS.sleep(1);
+						}
 						System.out.println("Wait.. You hear a sudden slam right behind you. Good luck, " + Player.getPlayerName() + ".");
 						 Combat.startFCombat();
 					}
