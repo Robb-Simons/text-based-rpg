@@ -3,8 +3,7 @@ package textbasedrpg;
  * Written by: Robert Simons 
  * Composition date: 12-30-2020
  * Program name: Text-based RPG project
- * Program Desc:     
- * TODO: Create specialRoom variable and method for boss/mechants etc;                                
+ * Program Desc:                                   
  *************************************************************************************************/
 import java.util.Random;
 

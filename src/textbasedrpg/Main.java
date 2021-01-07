@@ -85,6 +85,7 @@ public class Main {
 					if (i == 15) {
 						//Final Boss round.
 						 Environment.announceFBoss();
+						 //Combat.startFCombat();
 					}
 					else { //rest of gameplay.
 						String floorName = Environment.announceFloor();

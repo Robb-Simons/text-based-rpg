@@ -192,6 +192,7 @@ public class Player {
 		
 	}
 	
+	//TODO: change attack so its actually changing
 	public int Attack() {
 		int finalAttack = rand.nextInt(getPlayerAttack());
 		return finalAttack;

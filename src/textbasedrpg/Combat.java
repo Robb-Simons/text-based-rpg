@@ -23,14 +23,16 @@ public class Combat {
 	private int playerNewHealth = playerHealth;
 	private int enemyNewHealth = enemyHealth;
 	private int enemySwing = rand.nextInt(Monster.Attack());
-	private int hit = Player.Attack();
+	private int hit = rand.nextInt(Player.Attack());
 
 	public void startCombat() {
 		try { // error handler for TimeUnit
 			// this method should start the combat block, while in this
 //		int enemyHealth = rand.nextInt(Monster.getMaxEnemyHealth());
 //		String enemyName = Monster.RandomEnemy();
+			enemyName = Monster.RandomEnemy();
 			System.out.println("\t!#> " + enemyName + " has appeared! <#! ");
+			enemyNewHealth = rand.nextInt(Monster.getMaxEnemyHealth());
 
 			// While enemy is alive
 			COMBAT_START: while (enemyNewHealth > 0) {
@@ -50,12 +52,11 @@ public class Combat {
 				if (input == 1 || input == 2 || input == 3) {
 					// Attack
 					if (input == 1) {
-						// Player Swinging
 						enemySwing = rand.nextInt(Monster.Attack());
+						hit = rand.nextInt(Player.Attack());
 						System.out.println("You lunge forward and strike the " + enemyName + "!!");
 						TimeUnit.SECONDS.sleep(2);
-						System.out.println("You dealt " + hit + " damage!");
-						// Monster Swinging
+						System.out.println("You dealt " + hit + " damage!");		
 						System.out.println(enemyName + " dealt " + enemySwing + " Damage!");
 						enemyNewHealth = enemyNewHealth - hit;
 						playerNewHealth = playerNewHealth - enemySwing;
@@ -124,7 +125,7 @@ public class Combat {
 				}
 
 				// When Enemy Dies.
-				if (enemyHealth <= 0) {
+				if (enemyNewHealth <= 0) {
 					System.out.println("You have defeated " + enemyName + "!!");
 					break;
 				} else {
