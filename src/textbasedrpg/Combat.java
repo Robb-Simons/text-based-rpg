@@ -267,6 +267,7 @@ public class Combat {
 				if (enemyNewHealth <= 0) {
 					System.out.println("You have defeated " + enemyName + "!!");
 					System.out.println("You have beaten my FIRST game ever. Thank you so fuckin' much for playing. it means the W O R L D to me :)");
+					System.exit(0);
 					break;
 				} else {
 					continue COMBAT_START;
