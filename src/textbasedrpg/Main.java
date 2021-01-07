@@ -81,14 +81,15 @@ public class Main {
 					//checks rounds if 5 or 10 stops game for a merchant round.
 					if (i == 5 || i == 10) {
 						Environment.announceMerchant();
+						TimeUnit.SECONDS.sleep(1);
+						System.out.println("Welp... Onto the next floor.");
 					} 
 					if (i == 15) {
 						//Final Boss round.
 						System.out.println("The exit is in the next room. Your adrenaline starts pumping as you see light coming from the gates.\n\n");
 						TimeUnit.SECONDS.sleep(1);
 						System.out.println("Wait.. You hear a sudden slam right behind you. Good luck, " + Player.getPlayerName() + ".");
-						 Environment.announceFBoss();
-						 //Combat.startFCombat();
+						 Combat.startFCombat();
 					}
 						//rest of gameplay.
 						String floorName = Environment.announceFloor();

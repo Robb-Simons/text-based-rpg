@@ -54,8 +54,4 @@ public class Environment {
 		
 	}
 	
-	public void announceFBoss() {
-		
-	}
-	
 }
