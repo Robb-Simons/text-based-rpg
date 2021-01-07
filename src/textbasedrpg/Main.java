@@ -93,6 +93,7 @@ public class Main {
 					// restart). Make other labels within the While loop to call to certain events.
 			try { 
 			while (running) {
+				//TODO: make game 10 rounds long with intermissions at 5 and 9
 				//Variables needed for game
 				String floorName = Environment.announceFloor();
 				// Game Start.
