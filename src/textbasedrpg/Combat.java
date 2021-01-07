@@ -53,7 +53,7 @@ public class Combat {
 					// Attack
 					if (input == 1) {
 						enemySwing = rand.nextInt(Monster.Attack()+1);
-						hit = rand.nextInt(Player.Attack()+1);
+						hit = rand.nextInt(Player.Attack()+2);
 						System.out.println("You lunge forward and strike the " + enemyName + "!!");
 						TimeUnit.SECONDS.sleep(2);
 						System.out.println("You dealt " + hit + " damage!");		
