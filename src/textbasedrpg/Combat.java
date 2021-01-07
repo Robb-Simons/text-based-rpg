@@ -22,8 +22,8 @@ public class Combat {
 	String enemyName = Monster.RandomEnemy();
 	private int playerNewHealth = playerHealth;
 	private int enemyNewHealth = enemyHealth;
-	private int enemySwing = rand.nextInt(Monster.Attack());
-	private int hit = rand.nextInt(Player.Attack());
+	private int enemySwing = rand.nextInt(Monster.Attack()+1);
+	private int hit = rand.nextInt(Player.Attack()+1);
 
 	public void startCombat() {
 		try { // error handler for TimeUnit
@@ -52,8 +52,8 @@ public class Combat {
 				if (input == 1 || input == 2 || input == 3) {
 					// Attack
 					if (input == 1) {
-						enemySwing = rand.nextInt(Monster.Attack());
-						hit = rand.nextInt(Player.Attack());
+						enemySwing = rand.nextInt(Monster.Attack()+1);
+						hit = rand.nextInt(Player.Attack()+1);
 						System.out.println("You lunge forward and strike the " + enemyName + "!!");
 						TimeUnit.SECONDS.sleep(2);
 						System.out.println("You dealt " + hit + " damage!");		
@@ -66,7 +66,7 @@ public class Combat {
 						}
 						if (enemyNewHealth <= 0) {
 							enemyNewHealth = 0;
-							System.out.println("You have defeated " + enemyName + "!!");
+							//System.out.println("You have defeated " + enemyName + "!!");
 						} else {
 							System.out.println("The " + enemyName + " has " + enemyNewHealth + " health left!");
 							continue COMBAT_START;

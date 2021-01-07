@@ -87,7 +87,7 @@ public class Main {
 						 Environment.announceFBoss();
 						 //Combat.startFCombat();
 					}
-					else { //rest of gameplay.
+						//rest of gameplay.
 						String floorName = Environment.announceFloor();
 						System.out.println(floorName);
 						TimeUnit.SECONDS.sleep(2);
@@ -96,7 +96,6 @@ public class Main {
 						} else {
 							Combat.outOfCombat();
 						}
-					}
 				}
 				running = false;// Test to break the while loop, saving memory while testing ofc.
 			}

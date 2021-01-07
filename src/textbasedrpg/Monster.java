@@ -9,8 +9,8 @@ import java.util.Random;
 
 public class Monster {
 	Random rand = new Random();
-	private int maxEnemyHealth = 75;
-	private int EnemyAttack = 25;
+	private int maxEnemyHealth = 35;
+	private int EnemyAttack = 8;
 	private String enemy ="";
 	private String[] Enames = {"Orc",//0
 					   "Skeleton",//1
