@@ -84,6 +84,9 @@ public class Main {
 					} 
 					if (i == 15) {
 						//Final Boss round.
+						System.out.println("The exit is in the next room. Your adrenaline starts pumping as you see light coming from the gates.\n\n");
+						TimeUnit.SECONDS.sleep(1);
+						System.out.println("Wait.. You hear a sudden slam right behind you. Good luck, " + Player.getPlayerName() + ".");
 						 Environment.announceFBoss();
 						 //Combat.startFCombat();
 					}

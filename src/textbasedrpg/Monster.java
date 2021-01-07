@@ -25,6 +25,22 @@ public class Monster {
 					   "Thief",//10
 					   };
 	
+	private String FinalBoss = "Osiris the Omnipresent";
+	private int maxFEnemyHealth = 60;
+	private int FEnemyAttack = 24;
+	
+	public String getFBossName() {
+		return FinalBoss;
+	}
+	
+	public int getFBossHealth() {
+		return maxFEnemyHealth;
+	}
+	
+	public int getFBossAttack() {
+		return FEnemyAttack;
+	}
+	
 	public int getMaxEnemyHealth() {
 		return maxEnemyHealth;
 	}

@@ -165,4 +165,8 @@ public class Combat {
 		
 	}
 
+	
+	public void startFCombat() {
+		//TODO: Final boss fight. Copy startCombat here but remove all enemy tags
+	}
 }

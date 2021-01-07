@@ -34,7 +34,6 @@ public class Environment {
 	private String[] midLoot = {"Prisioner's Chain", "Dead man's Jewelry", "Chain-mail Undergarments", "Sealed-shut Steamy romance novel"};//sells for 5 gold @ vendor
 	private String[] highLoot = {"Glowing Stone", "Bag of Fine Jewels", "Mysterious Key", "King's Chaliace", "Tooth of an Old One"};//sells for 7 gold @ vendor
 	
-	private String bossRoom = "The Throne Room";
 	private String breakRoom = "Friendly Merchants Chamber";
 	
 	public String announceFloor() {
@@ -50,6 +49,8 @@ public class Environment {
 	}
 	
 	public void announceMerchant() {
+		System.out.println("You are in the " + breakRoom + ". You can take a breather here.");
+		System.out.println("in future updates you will be able to increase your power through this vendor.");
 		
 	}
 	
