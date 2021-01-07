@@ -96,6 +96,7 @@ public class Main {
 				//TODO: make game 10 rounds long with intermissions at 5 and 9
 				//Variables needed for game
 				String floorName = Environment.announceFloor();
+				TimeUnit.SECONDS.sleep(2);
 				// Game Start.
 				NEW_FLOOR: // Label to reuse these lines
 				// Announce Floor via Environment.java
