@@ -44,68 +44,57 @@ public class Main {
 		System.out.println("--------------------------------------------------------------------------");
 		// TODO: fix this logic to work in the game, might need to make this in
 		// Player.java.
-/************************************************************************************************************
-		// Class Selection
-		System.out.println("\t # What Class would you like to be? # ");
-		System.out.println("Enter 1 for Warrior (+75 HP) (+25 Attack) (-20 Stamina) (-2 Max Potions)\n");
-		System.out.println("Enter 2 for Rogue (-25 HP) (+20 Attack) (+10 Stamina) (Default Max Potions)\n");
-		System.out.println("Enter 3 for Alchemist (-50 HP) (-10 Attack) (-30 Stamina) (+4 Max Potions)\n");
-		int inputI = in.nextInt();
-		// TODO: make this a switch statement.. I dont think it needs to be IF
-		// conditionals. Someone if you are reading this help. Im not sure. Help.
-		if (inputI == 1 || inputI == 2 || inputI == 3 || inputI == 4) {
-			if (inputI == 1) {
-				// Warrior
-				Player.setClassName(1);
-				Player.setWarClass();
-				System.out.println("You have Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
-				System.out.println(Player.printStats());
-			}
-
-			if (inputI == 2) {
-				// Rogue
-				Player.setClassName(2);
-				Player.setRogClass();
-				System.out.println("You have Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
-				System.out.println(Player.printStats());
-			}
-
-			if (inputI == 3) {
-				// Alchemist
-				Player.setClassName(3);
-				Player.setAlcClass();
-				System.out.println("You have Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
-				System.out.println(Player.printStats());
-			}
-
-			if (inputI == 4) {
-				// Traveler
-				System.out.println("You have Chosen: " + Player.getClassName() + ". Wait... Did I tell you about this? Anyway, Good Choice. Your stats are: ");
-				System.out.println(Player.printStats());
-			}
-		} else {
-			running = false;
-			System.out.println("Terminated goodbye!");
-			System.exit(0);
-		}
-*************************************************************************************************************************************************/
+		/************************************************************************************************************
+		 * // Class Selection System.out.println("\t # What Class would you like to be?
+		 * # "); System.out.println("Enter 1 for Warrior (+75 HP) (+25 Attack) (-20
+		 * Stamina) (-2 Max Potions)\n"); System.out.println("Enter 2 for Rogue (-25 HP)
+		 * (+20 Attack) (+10 Stamina) (Default Max Potions)\n");
+		 * System.out.println("Enter 3 for Alchemist (-50 HP) (-10 Attack) (-30 Stamina)
+		 * (+4 Max Potions)\n"); int inputI = in.nextInt(); // TODO: make this a switch
+		 * statement.. I dont think it needs to be IF // conditionals. Someone if you
+		 * are reading this help. Im not sure. Help. if (inputI == 1 || inputI == 2 ||
+		 * inputI == 3 || inputI == 4) { if (inputI == 1) { // Warrior
+		 * Player.setClassName(1); Player.setWarClass(); System.out.println("You have
+		 * Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
+		 * System.out.println(Player.printStats()); }
+		 * 
+		 * if (inputI == 2) { // Rogue Player.setClassName(2); Player.setRogClass();
+		 * System.out.println("You have Chosen: " + Player.getClassName() + ". Great
+		 * Choice. Your new stats are: "); System.out.println(Player.printStats()); }
+		 * 
+		 * if (inputI == 3) { // Alchemist Player.setClassName(3); Player.setAlcClass();
+		 * System.out.println("You have Chosen: " + Player.getClassName() + ". Great
+		 * Choice. Your new stats are: "); System.out.println(Player.printStats()); }
+		 * 
+		 * if (inputI == 4) { // Traveler System.out.println("You have Chosen: " +
+		 * Player.getClassName() + ". Wait... Did I tell you about this? Anyway, Good
+		 * Choice. Your stats are: "); System.out.println(Player.printStats()); } } else
+		 * { running = false; System.out.println("Terminated goodbye!"); System.exit(0);
+		 * }
+		 *************************************************************************************************************************************************/
 		GAME_START: // label needed for later to return to the beginning of the game (death, or
 					// restart). Make other labels within the While loop to call to certain events.
-			try { 
+		try {
 			while (running) {
-				//TODO: make game 10 rounds long with intermissions at 5 and 9
-				//Variables needed for game
-				String floorName = Environment.announceFloor();
-				TimeUnit.SECONDS.sleep(2);
-				// Game Start.
-				NEW_FLOOR: // Label to reuse these lines
-				// Announce Floor via Environment.java
-				System.out.println(floorName);
-				TimeUnit.SECONDS.sleep(2);
-				if (rand.nextInt(1000) >= 0) {
-					Combat.startCombat();
-				} else {
-					Combat.outOfCombat();
+				// TODO: make game 15 rounds long with intermissions at 5 and 9
+				for (int i = 0; i <= 15; i++) {
+					//checks rounds if 5 or 10 stops game for a merchant round.
+					if (i == 5 || i == 10) {
+						Environment.announceMerchant();
+					} 
+					if (i == 15) {
+						//Final Boss round.
+					}
+					else { //rest of gameplay.
+						String floorName = Environment.announceFloor();
+						System.out.println(floorName);
+						TimeUnit.SECONDS.sleep(2);
+						if (rand.nextInt(1000) >= 0) {
+							Combat.startCombat();
+						} else {
+							Combat.outOfCombat();
+						}
+					}
 				}
 				running = false;// Test to break the while loop, saving memory while testing ofc.
 			}

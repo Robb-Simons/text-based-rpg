@@ -50,5 +50,8 @@ public class Environment {
 		return Announcement;
 	}
 	
+	public void announceMerchant() {
+		
+	}
 	
 }
