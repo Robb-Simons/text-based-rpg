@@ -6,6 +6,7 @@ package textbasedrpg;
  * Program Desc:                                   
  *************************************************************************************************/
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class Environment {
 	Random rand = new Random();
@@ -51,6 +52,15 @@ public class Environment {
 	public void announceMerchant() {
 		System.out.println("You are in the " + breakRoom + ". You can take a breather here.");
 		System.out.println("in future updates you will be able to increase your power through this vendor.");
+		for (int i=5; i >=1; i--) {
+			System.out.println("Leaving room in " + i);
+			try {
+				TimeUnit.SECONDS.sleep(1);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		
 	}
 	
