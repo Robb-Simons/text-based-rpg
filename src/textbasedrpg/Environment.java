@@ -51,6 +51,7 @@ public class Environment {
 	
 	public void announceMerchant() {
 		System.out.println("You are in the " + breakRoom + ". You can take a breather here.");
+		System.out.println("Hello! My name is Merchant guy. I will be open for business soon. Give my creator about another week.");
 		System.out.println("in future updates you will be able to increase your power through this vendor.");
 		//"load" for the leaving of the dungeons merchant room.
 		for (int i=5; i >=1; i--) {
