@@ -1,12 +1,9 @@
 package textbasedrpg;
-
-import java.io.IOException;
 /*************************************************************************************************
  * Written by: Robert Simons 
  * Composition date: 12-29-2020
  * Program name: Text-based RPG project
- * Program Desc:  
- * TODO:populate with variables that will handle events in the game.                                        
+ * Program Desc:                                         
  *************************************************************************************************/
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -18,7 +15,6 @@ public class Main {
 		boolean running = true;
 		Scanner in = new Scanner(System.in);
 		Player Player = new Player();
-		Monster Monster = new Monster();
 		Environment Environment = new Environment();
 		Combat Combat = new Combat();
 		Random rand = new Random();
@@ -52,7 +48,7 @@ public class Main {
 		 *  System.out.println("Enter 2 for Rogue (-25 HP) (+20 Attack) (+10 Stamina) (Default Max Potions)\n");
 		 *  System.out.println("Enter 3 for Alchemist (-50 HP) (-10 Attack) (-30 Stamina) (+4 Max Potions)\n");
 		 *  int inputI = in.nextInt(); 
-		 *  // TODO: make this a switch statement.. I dont think it needs to be IF // conditionals. Someone if you are reading this help. Im not sure. Help.
+		 *
 		 *  if (inputI == 1 || inputI == 2 || inputI == 3 || inputI == 4) {
 		 *  	 if (inputI == 1) { 
 		 *  		// Warrior
@@ -62,7 +58,7 @@ public class Main {
 		 * 			System.out.println(Player.printStats()); 
 		 * 		}
 		 * 
-		 * if (inputI == 2) { // Rogue Player.setClassName(2); Player.setRogClass();
+		 * 	if (inputI == 2) { // Rogue Player.setClassName(2); Player.setRogClass();
 		 * System.out.println("You have Chosen: " + Player.getClassName() + ". Great
 		 * Choice. Your new stats are: "); System.out.println(Player.printStats()); }
 		 * 
@@ -78,7 +74,7 @@ public class Main {
 		 *************************************************************************************************************************************************/
 		try {
 			while (running) {
-				for (int i = 0; i <= 15; i++) {//15 rounds
+				for (int i = 4; i <= 15; i++) {//15 rounds
 					//checks rounds if 5 or 10 stops game for a merchant round.
 					if (i == 5 || i == 10) {
 						Environment.announceMerchant();
