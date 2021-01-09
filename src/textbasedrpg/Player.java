@@ -4,7 +4,6 @@ package textbasedrpg;
  * Composition date: 12-29-2020
  * Program name: Text-based RPG project
  * Program Desc:  
- *TODO: make getters and setters for all variables here to be executed in Main.java
  *TODO: Create moveForward(), Attack(), Block(), drinkPotion() and Rest();                                       
  *************************************************************************************************/
 import java.util.Random;
@@ -32,26 +31,26 @@ public class Player {
 	public void setGold(int newGold) {
 		this.gold = newGold;
 	}
-	
-	public void setWarClass() {
-		playerHealth = playerHealth + 75;
-		playerAttack = playerAttack + 25;
-		playerStamina = playerStamina - 20;
-		playerMaxPotions = playerMaxPotions -2;
-	}
-	
-	public void setRogClass() {
-		playerHealth = playerHealth -25;
-		playerAttack = playerAttack+20;
-		playerStamina = playerStamina +10;
-	}
-	
-	public void setAlcClass() {
-		playerHealth = playerHealth -50;
-		playerAttack = playerAttack - 10;
-		playerStamina = playerStamina - 30;
-		playerMaxPotions = playerMaxPotions + 4;
-	}
+	//TODO: Make setting a class work.
+//	public void setWarClass() {
+//		playerHealth = playerHealth + 75;
+//		playerAttack = playerAttack + 25;
+//		playerStamina = playerStamina - 20;
+//		playerMaxPotions = playerMaxPotions -2;
+//	}
+//	
+//	public void setRogClass() {
+//		playerHealth = playerHealth -25;
+//		playerAttack = playerAttack+20;
+//		playerStamina = playerStamina +10;
+//	}
+//	
+//	public void setAlcClass() {
+//		playerHealth = playerHealth -50;
+//		playerAttack = playerAttack - 10;
+//		playerStamina = playerStamina - 30;
+//		playerMaxPotions = playerMaxPotions + 4;
+//	}
 	
 	public String printStats() {
 		String statString = "";
@@ -69,8 +68,7 @@ public class Player {
 		int newClass = classNameMod - 1;
 		finalClassName = classNames[newClass];
 	}
-	
-	//TODO: Add stat bonuses/decreases for each Class. 
+	 
 	
 	public String getPlayerName() {
 		return playerName;
@@ -156,8 +154,7 @@ public class Player {
 	
 	public void moveForward() {
 		//TODO:
-		//populate with roll for next room
-		//after roll for next room, check for combat
+		//move to next room (nothing, just continue the While loop in Main.)
 	}
 	
 	//TODO: Make decision to eliminate Stamina or not. 
@@ -192,7 +189,6 @@ public class Player {
 		
 	}
 	
-	//TODO: change attack so its actually changing
 	public int Attack() {
 		int finalAttack = rand.nextInt(getPlayerAttack());
 		return finalAttack;

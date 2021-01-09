@@ -31,9 +31,11 @@ public class Environment {
 			"Mage's Chamber",//11
 			"Portal Room",//12
 			};
-	private String[] badLoot = {"Withered junk", "10-Day old carcass", "Glob of slime", "Rusted Coin"};//sells for 2 gold @ vendor
-	private String[] midLoot = {"Prisioner's Chain", "Dead man's Jewelry", "Chain-mail Undergarments", "Sealed-shut Steamy romance novel"};//sells for 5 gold @ vendor
-	private String[] highLoot = {"Glowing Stone", "Bag of Fine Jewels", "Mysterious Key", "King's Chaliace", "Tooth of an Old One"};//sells for 7 gold @ vendor
+	
+	//TODO: When adding merchant to game ensure these are uncommented.
+	//private String[] badLoot = {"Withered junk", "10-Day old carcass", "Glob of slime", "Rusted Coin"};//sells for 2 gold @ vendor
+	//private String[] midLoot = {"Prisioner's Chain", "Dead man's Jewelry", "Chain-mail Undergarments", "Sealed-shut Steamy romance novel"};//sells for 5 gold @ vendor
+	//private String[] highLoot = {"Glowing Stone", "Bag of Fine Jewels", "Mysterious Key", "King's Chaliace", "Tooth of an Old One"};//sells for 7 gold @ vendor
 	
 	private String breakRoom = "Friendly Merchants Chamber";
 	
@@ -59,15 +61,15 @@ public class Environment {
 		//5 second timer then forced exit.
 		System.out.println("in future updates you will be able to increase your power through this vendor.");
 		//"load" for the leaving of the dungeons merchant room.
-		for (int i=5; i >=1; i--) {
-			System.out.println("Leaving room in " + i);
-			try {
+		try {
+			for (int i=5; i >=1; i--) {
+				System.out.println("Leaving room in " + i);
 				TimeUnit.SECONDS.sleep(1);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
+				}
+		} 
+		catch (InterruptedException e) {
+			e.printStackTrace();
+		} 
 		
 	}
 	
