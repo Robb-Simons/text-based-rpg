@@ -3,7 +3,8 @@ package textbasedrpg;
  * Written by: Robert Simons 
  * Composition date: 12-29-2020
  * Program name: Text-based RPG project
- * Program Desc:TODO: Add to me. before official release                                      
+ * Program Desc:TODO: Add to me. before official release   
+ * TODO: add jframe for output window to file so JRE can run the game.                                   
  *************************************************************************************************/
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
