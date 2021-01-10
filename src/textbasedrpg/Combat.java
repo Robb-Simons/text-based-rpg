@@ -6,6 +6,7 @@ package textbasedrpg;
  * Program name: Text-based RPG project
  * Program Desc: Program handles all combat engagements.  
  * TODO: Make the monster swing back.
+ * TODO: Fill the program description
  *************************************************************************************************/
 import java.util.Random;
 import java.util.Scanner;
