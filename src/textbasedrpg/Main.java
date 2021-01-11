@@ -106,11 +106,11 @@ public class Main {
 						String floorName = Environment.announceFloor();
 						System.out.println(floorName + "  Floor No: " + i);
 						TimeUnit.SECONDS.sleep(2);
-						if (rand.nextInt(1000) >= 0) {
-							Combat.startCombat();
-						} else {
-							Combat.outOfCombat();
-						}
+						//if (rand.nextInt(1000) >= 0) {
+						Combat.startCombat();
+						//} else {
+						//	Combat.outOfCombat();
+						//}
 				}
 				running = false;// Test to break the while loop, saving memory while testing ofc.
 			}
