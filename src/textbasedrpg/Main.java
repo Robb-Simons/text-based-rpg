@@ -1,4 +1,7 @@
 package textbasedrpg;
+
+import java.io.IOException;
+import java.net.URISyntaxException;
 /*************************************************************************************************
  * Written by: Robert Simons 
  * Composition date: 12-29-2020
@@ -9,10 +12,14 @@ package textbasedrpg;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
+import java.io.*;
+import java.awt.GraphicsEnvironment;
+import java.net.URISyntaxException;
+
 
 public class Main {
-
-	public static void main(String[] args) {
+	
+	public static void main(String[] args) throws IOException, InterruptedException, URISyntaxException {
 		boolean running = true;
 		Scanner in = new Scanner(System.in);
 		Player Player = new Player();
@@ -75,7 +82,7 @@ public class Main {
 		 *************************************************************************************************************************************************/
 		try {
 			while (running) {
-				for (int i = 4; i <= 15; i++) {//15 rounds
+				for (int i = 0; i <= 15; i++) {//15 rounds
 					//checks rounds if 5 or 10 stops game for a merchant round.
 					if (i == 5 || i == 10) {
 						Environment.announceMerchant();

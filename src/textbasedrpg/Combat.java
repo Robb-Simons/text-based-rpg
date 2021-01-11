@@ -128,7 +128,6 @@ public class Combat {
 				// When Enemy Dies.
 				if (enemyNewHealth <= 0) {
 					System.out.println("You have defeated " + enemyName + "!!");
-					in.close();
 					break;
 				} else {
 					continue COMBAT_START;
@@ -238,7 +237,7 @@ public class Combat {
 						}
 						if (playerNewHealth <= 0) {
 							System.out.println("\t!@#$%^ GAME OVER ^%$#@!");
-							in.close();
+							
 							System.exit(0);
 						}
 						continue COMBAT_START;
