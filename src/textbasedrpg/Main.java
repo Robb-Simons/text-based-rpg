@@ -1,5 +1,12 @@
 package textbasedrpg;
-
+/*************************************************************************************************
+ * Written by: Robert Simons 
+ * Composition date: 12-30-2020
+ * Program name: Text-based RPG project
+ * Program Desc: Main class to run all of the code required to start the game.
+ * 				 creates new objects of every class defined in the package minus Monster.java.
+ * 				 TODO: Create code to handle execution of this from .Jar. 
+ *************************************************************************************************/
 import java.io.IOException;
 import java.net.URISyntaxException;
 /*************************************************************************************************

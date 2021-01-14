@@ -3,8 +3,10 @@ package textbasedrpg;
  * Written by: Robert Simons 
  * Composition date: 12-29-2020
  * Program name: Text-based RPG project
- * Program Desc:  
- *TODO: Create moveForward(), Attack(), Block(), drinkPotion() and Rest();                                       
+ * Program Desc: This Class defines the player character in the game.
+ * 				 it was created to be modular. Not all features are used
+ * 				 in this game but will be used in future concepts.
+ * TODO: Make Classes work.                                     
  *************************************************************************************************/
 import java.util.Random;
 

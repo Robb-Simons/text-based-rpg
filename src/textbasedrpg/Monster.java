@@ -3,7 +3,9 @@ package textbasedrpg;
  * Written by: Robert Simons 
  * Composition date: 12-29-2020
  * Program name: Text-based RPG project
- * Program Desc: TODO: fill me.                                 
+ * Program Desc: This Class defines the Random Enemy NPC's that the character 
+ * 				 in the game will fight. it was created to be modular.
+ * 				 Not all features are used in this game but will be used in future concepts.                                 
  *************************************************************************************************/
 import java.util.Random;
 
