@@ -2,7 +2,7 @@ package textbasedrpg;
 /*************************************************************************************************
  * Written by: Robert Simons 
  * Composition date: 12-30-2020
- * Program name: Dungeon of Holt - 0.8
+ * Program name: Dungeon of Holt - v0.8
  * Program Desc: Main class to run all of the code required to start the game.
  * 				 creates new objects of every class defined in the package minus Monster.java.
  * 				 TODO: Create code to handle execution of this from .Jar. 

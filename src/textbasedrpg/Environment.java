@@ -2,7 +2,7 @@ package textbasedrpg;
 /*************************************************************************************************
  * Written by: Robert Simons 
  * Composition date: 12-30-2020
- * Program name: Dungeon of Holt - 0.8
+ * Program name: Dungeon of Holt - v0.8
  * Program Desc:  This class handles the random generation of Floor names and holds the methods containing the merchant.                                
  *************************************************************************************************/
 import java.util.Random;
