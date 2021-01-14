@@ -3,7 +3,7 @@ package textbasedrpg;
 /*************************************************************************************************
  * Written by: Robert Simons 
  * Composition date: 12-30-2020
- * Program name: Text-based RPG project
+ * Program name: Dungeon of Holt - 0.8
  * Program Desc: Program handles all combat engagements. Handles ALL combat for the game,
  *               startCombat() is the core method in this class. This code is not in the best shape it could be in, but it works.
  *               Finalboss combat is duplicated with a few added strings and different variable definitions. 
