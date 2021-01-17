@@ -61,7 +61,7 @@ public class Main {
 		 *  System.out.println("\t # What Class would you like to be? # ");
 		 *  System.out.println("Enter 1 for Warrior (+75 HP) (+25 Attack) (-20 Stamina) (-2 Max Potions)\n");
 		 *  System.out.println("Enter 2 for Rogue (-25 HP) (+20 Attack) (+10 Stamina) (Default Max Potions)\n");
-		 *  System.out.println("Enter 3 for Alchemist (-50 HP) (-10 Attack) (-30 Stamina) (+4 Max Potions)\n");
+		 *  System.out.println("Enter 3 for Alchemist (-50 HP) (-10 Attack) (-30 Stamina) (+4 ax Potions)\n");
 		 *  int inputI = in.nextInt(); 
 		 *
 		 *  if (inputI == 1 || inputI == 2 || inputI == 3 || inputI == 4) {

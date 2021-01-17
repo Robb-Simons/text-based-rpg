@@ -6,7 +6,8 @@ package textbasedrpg;
  * Program Desc: This Class defines the player character in the game.
  * 				 it was created to be modular. Not all features are used
  * 				 in this game but will be used in future concepts.
- * TODO: Make Classes work.                                     
+ * TODO: Make Classes work.
+ * TODO:Make Gold work                                     
  *************************************************************************************************/
 import java.util.Random;
 
