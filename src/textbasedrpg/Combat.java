@@ -7,6 +7,10 @@ package textbasedrpg;
  * Program Desc: Program handles all combat engagements. Handles ALL combat for the game,
  *               startCombat() is the core method in this class. This code is not in the best shape it could be in, but it works.
  *               Finalboss combat is duplicated with a few added strings and different variable definitions. 
+ *TODO: Fix Bug where players name is not recognized/ saved in startCombat()
+ *TODO: Likely same bug in FBoss as well.
+ *TODO: Add a TimeUnit Wait for block that Fails, Works when successful, not during a fail.
+ *TODO: Make OutOfCombat() Work as intended.
  *************************************************************************************************/
 import java.util.Random;
 import java.util.Scanner;
