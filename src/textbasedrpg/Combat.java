@@ -57,34 +57,44 @@ public class Combat {
 				if (input == 1 || input == 2 || input == 3) {
 					// Attack
 					if (input == 1) {
-						enemySwing = rand.nextInt(Monster.Attack()+1);
-						hit = rand.nextInt(Player.Attack()+2);
+						//Vairables handling Damage numbers
+						enemySwing = rand.nextInt(Monster.Attack()+1);//Enemy Swing
+						hit = rand.nextInt(Player.Attack()+2);//Player Swing. 
+						//Dialog for player
 						System.out.println("You lunge forward and strike the " + enemyName + "!!");
+						//Sleep 2 seconds for 'Dramatic' effect.
 						TimeUnit.SECONDS.sleep(2);
+						//Output Damage dealt
 						System.out.println("You dealt " + hit + " damage!");		
 						System.out.println(enemyName + " dealt " + enemySwing + " Damage!");
+						//Resolve new values locally
 						enemyNewHealth = enemyNewHealth - hit;
 						playerNewHealth = playerNewHealth - enemySwing;
+						//Check for Player Death.
 						if (playerNewHealth <= 0) {
 							System.out.println("\t!@#$%^ GAME OVER ^%$#@!");
 							System.exit(0);
 						}
+						//Check for enemy death. 
 						if (enemyNewHealth <= 0) {
 							enemyNewHealth = 0;
 							//System.out.println("You have defeated " + enemyName + "!!");
+						//If clear repeat combat till checks are passed.
 						} else {
 							System.out.println("The " + enemyName + " has " + enemyNewHealth + " health left!");
-							continue COMBAT_START;
+							continue COMBAT_START;//Starts the whole While loop over for Combat
 						}
 					}
 					// Block
 					if (input == 2) {
+						//Local instanciation of Enemy hit.
 						enemySwing = rand.nextInt(Monster.Attack());
 						System.out.println("You attempt to cower behind your shield!");
 						// Block
+						//If Successful
+						TimeUnit.SECONDS.sleep(2);
 						if (Player.Block() == true) {
-							TimeUnit.SECONDS.sleep(2);
-
+							//Output for player
 							System.out.println("\tBlock Successful!");
 							System.out.println(enemyName + " trys to deal " + enemySwing + " damage!");
 							// how much is blocked
@@ -97,10 +107,15 @@ public class Combat {
 							System.out.println("You took " + enemySwing + " damage");
 							// adjust health value
 							playerNewHealth = playerNewHealth - enemySwing;
+						//If not successful.	
 						} else {
+							//Output of Results.
+							System.out.println("\tBlock Failed!");
 							System.out.println(enemyName + " dealt " + enemySwing + " damage!");
+							//Health Adjustment from damage.
 							playerNewHealth = playerNewHealth - enemySwing;
 						}
+						//Checks for Player Death
 						if (playerNewHealth <= 0) {
 							System.out.println("\t!@#$%^ GAME OVER ^%$#@!");
 							System.exit(0);

@@ -7,7 +7,7 @@ package textbasedrpg;
  * 				 it was created to be modular. Not all features are used
  * 				 in this game but will be used in future concepts.
  * TODO: Make Classes work.
- * TODO:Make Gold work
+ * TODO: Make Gold work
  * TODO: Make Stamina work
  * TODO: Make Potions work                                     
  *************************************************************************************************/
@@ -104,7 +104,7 @@ public class Player {
 	}
 	
 	public void setPlayerStamina(int newStam) {
-		this.playerStamina = newStam;
+		this.playerStamina = playerStamina - newStam;
 	}
 	
 	public int getPlayerPotions() {

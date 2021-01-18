@@ -5,7 +5,7 @@ package textbasedrpg;
  * Program name: Dungeon of Holt - v0.8
  * Program Desc: Main class to run all of the code required to start the game.
  * 				 creates new objects of every class defined in the package minus Monster.java.
- * 				 TODO: Create code to handle execution of this from .Jar. 
+ * 				 TODO: Create code to handle execution of this from .Jar.  (Wait on this to see how the Jar works on other machines.)
  *************************************************************************************************/
 import java.io.IOException;
 import java.net.URISyntaxException;
