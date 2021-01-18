@@ -89,7 +89,7 @@ public class Main {
 		 *************************************************************************************************************************************************/
 		try {
 			while (running) {
-				for (int i = 0; i <= 15; i++) {//15 rounds
+				for (int i = 14; i <= 15; i++) {//15 rounds
 					//checks rounds if 5 or 10 stops game for a merchant round.
 					if (i == 5 || i == 10) {
 						Environment.announceMerchant();

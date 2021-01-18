@@ -290,12 +290,18 @@ public class Combat {
 				//TODO: add timeunit here
 				if (enemyNewHealth <= 0) {
 					System.out.println("You have defeated " + enemyName + "!!");
+					TimeUnit.SECONDS.sleep(1);
 					System.out.println("\tYou have beaten my FIRST game ever.");
+					TimeUnit.SECONDS.sleep(1);
 					System.out.println("\tThank you so fuckin' much for playing.");
+					TimeUnit.SECONDS.sleep(1);
 					System.out.println("\tit means the W O R L D to me :)");
+					TimeUnit.SECONDS.sleep(1);
 					System.out.println("\tIf you want to see more of my work,");
-					System.out.println("\tfollow me on Twitter @Simons_saysNull !!");
-					System.out.println("\t\t - Robb Simons");
+					TimeUnit.SECONDS.sleep(1);
+					System.out.println("\tfollow me on Twitter @Simons_saysNull");
+					TimeUnit.SECONDS.sleep(2);
+					System.out.println("\tThanks again for playing my game.          - Robb Simons");
 					System.exit(0);
 					break;
 				} else {
