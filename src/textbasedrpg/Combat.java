@@ -127,11 +127,14 @@ public class Combat {
 					if (input == 3) {
 						System.out.println("You attempt to flee!");
 						// roll to see if flee
+						//if successful Flee
 						if (Player.Run() == true) {
 							TimeUnit.SECONDS.sleep(2);
 							System.out.println("you've run away from the " + enemyName + "!");
 							break COMBAT_START;
+						//If Fail to flee	
 						} else {
+							TimeUnit.SECONDS.sleep(2);
 							enemySwing = rand.nextInt(Monster.Attack());
 							System.out.println(enemyName + " dealt " + enemySwing + " Damage!");
 							playerNewHealth = playerNewHealth - enemySwing;
@@ -284,9 +287,15 @@ public class Combat {
 				}
 
 				// When Enemy Dies.
+				//TODO: add timeunit here
 				if (enemyNewHealth <= 0) {
 					System.out.println("You have defeated " + enemyName + "!!");
-					System.out.println("You have beaten my FIRST game ever. Thank you so fuckin' much for playing. it means the W O R L D to me :)");
+					System.out.println("\tYou have beaten my FIRST game ever.");
+					System.out.println("\tThank you so fuckin' much for playing.");
+					System.out.println("\tit means the W O R L D to me :)");
+					System.out.println("\tIf you want to see more of my work,");
+					System.out.println("\tfollow me on Twitter @Simons_saysNull !!");
+					System.out.println("\t\t - Robb Simons");
 					System.exit(0);
 					break;
 				} else {
