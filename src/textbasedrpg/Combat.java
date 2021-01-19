@@ -20,8 +20,6 @@ public class Combat {
 	private Random rand = new Random();
 	Monster Monster = new Monster();
 	Player Player = new Player();
-	// Might need to put the variables here so the other methods can use it.
-	// TODO: Test this.
 	int enemyHealth = rand.nextInt(Monster.getMaxEnemyHealth());
 	int playerHealth = Player.getPlayerHealth();
 	String enemyName = Monster.RandomEnemy();
@@ -33,8 +31,6 @@ public class Combat {
 	public void startCombat() {
 		try { // error handler for TimeUnit
 			// this method should start the combat block, while in this
-//		int enemyHealth = rand.nextInt(Monster.getMaxEnemyHealth());
-//		String enemyName = Monster.RandomEnemy();
 			enemyName = Monster.RandomEnemy();
 			System.out.println("\t!#> " + enemyName + " has appeared! <#! ");
 			enemyNewHealth = rand.nextInt(Monster.getMaxEnemyHealth());
@@ -227,7 +223,7 @@ public class Combat {
 						}
 						if (enemyNewHealth <= 0) {
 							enemyNewHealth = 0;
-							//System.out.println("You have defeated " + enemyName + "!!");
+
 						} else {
 							System.out.println("The " + enemyName + " has " + enemyNewHealth + " health left!");
 							continue COMBAT_START;

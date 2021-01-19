@@ -35,10 +35,11 @@ public class Main {
 		Random rand = new Random();
 
 		// Start game sequence.
-//		Combat.startCombat();//shitty way to text combat features atm, but its workin so.. its stayin..
+		//Asks for Player name
 		System.out.println("What is your Name, Traveler?");
 		String inputStr = in.nextLine();
 		Player.setPlayerName(inputStr);
+		//Game introduction.
 		System.out.println("\t # Welcome to the Dungeon of Holt, " + Player.getPlayerName()
 				+ ". # \n--------------------------------------------------------------------------\n");
 		System.out.println(
@@ -51,43 +52,13 @@ public class Main {
 		System.out.println("\t WHEN IN COMBAT: \nPRESS 1 to ATTACK\nPRESS 2 to BLOCK\nPRESS 3 To RUN");
 		System.out.println("--------------------------------------------------------------------------");
 		System.out.println("Starting Values: ");
+		//Some of these values are not in use yet.. Stamina and Potions.
 		System.out.println("\tHealth: " + Player.getPlayerHealth() + "\tStamina: " + Player.getPlayerStamina()
 				+ "\tHealth Potions: " + Player.getPlayerPotions());
 		System.out.println("--------------------------------------------------------------------------");
-		// TODO: fix this logic to work in the game, might need to make this in
-		// Player.java.
-		/************************************************************************************************************
-		 * // Class Selection
-		 *  System.out.println("\t # What Class would you like to be? # ");
-		 *  System.out.println("Enter 1 for Warrior (+75 HP) (+25 Attack) (-20 Stamina) (-2 Max Potions)\n");
-		 *  System.out.println("Enter 2 for Rogue (-25 HP) (+20 Attack) (+10 Stamina) (Default Max Potions)\n");
-		 *  System.out.println("Enter 3 for Alchemist (-50 HP) (-10 Attack) (-30 Stamina) (+4 ax Potions)\n");
-		 *  int inputI = in.nextInt(); 
-		 *
-		 *  if (inputI == 1 || inputI == 2 || inputI == 3 || inputI == 4) {
-		 *  	 if (inputI == 1) { 
-		 *  		// Warrior
-		 * 			Player.setClassName(1);
-		 * 			Player.setWarClass(); 
-		 * 			System.out.println("You have Chosen: " + Player.getClassName() + ". Great Choice. Your new stats are: ");
-		 * 			System.out.println(Player.printStats()); 
-		 * 		}
-		 * 
-		 * 	if (inputI == 2) { // Rogue Player.setClassName(2); Player.setRogClass();
-		 * System.out.println("You have Chosen: " + Player.getClassName() + ". Great
-		 * Choice. Your new stats are: "); System.out.println(Player.printStats()); }
-		 * 
-		 * if (inputI == 3) { // Alchemist Player.setClassName(3); Player.setAlcClass();
-		 * System.out.println("You have Chosen: " + Player.getClassName() + ". Great
-		 * Choice. Your new stats are: "); System.out.println(Player.printStats()); }
-		 * 
-		 * if (inputI == 4) { // Traveler System.out.println("You have Chosen: " +
-		 * Player.getClassName() + ". Wait... Did I tell you about this? Anyway, Good
-		 * Choice. Your stats are: "); System.out.println(Player.printStats()); } } else
-		 * { running = false; System.out.println("Terminated goodbye!"); System.exit(0);
-		 * }
-		 *************************************************************************************************************************************************/
-		try {
+		
+		//Game Starts here
+		try {//Error handler for TimeUnit
 			while (running) {
 				for (int i = 0; i <= 15; i++) {//15 rounds
 					//checks rounds if 5 or 10 stops game for a merchant round.
@@ -119,7 +90,7 @@ public class Main {
 						//	Combat.outOfCombat();
 						//}
 				}
-				running = false;// Test to break the while loop, saving memory while testing ofc.
+				running = false;//Ends game if For loop is broken.
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
