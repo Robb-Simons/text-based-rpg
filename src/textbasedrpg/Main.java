@@ -81,9 +81,11 @@ public class Main {
 						 Combat.startFCombat();
 					}
 						//rest of gameplay.
+						//Announces the floor to player.
 						String floorName = Environment.announceFloor();
 						System.out.println(floorName + "  Floor No: " + i);
 						TimeUnit.SECONDS.sleep(2);
+						//chance to encounter enemies upon entering a room
 						//if (rand.nextInt(1000) >= 0) {
 						Combat.startCombat();
 						//} else {
