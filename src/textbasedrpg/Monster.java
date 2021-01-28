@@ -28,8 +28,8 @@ public class Monster {
 					   };
 	
 	private String FinalBoss = "Osiris the Omnipresent";
-	private int maxFEnemyHealth = 60;
-	private int FEnemyAttack = 24;
+	private int maxFEnemyHealth = 40;
+	private int FEnemyAttack = 16;
 	
 	public String getFBossName() {
 		return FinalBoss;
